@@ -1,0 +1,1399 @@
+{
+  "library": {
+    "localId": "0",
+    "annotation": [
+      {
+        "type": "CqlToElmInfo",
+        "translatorVersion": "5.6.1",
+        "translatorOptions": "EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion",
+        "signatureLevel": "Overloads"
+      },
+      {
+        "type": "Annotation",
+        "t": [],
+        "s": {
+          "r": "291",
+          "s": [
+            {
+              "value": [
+                "",
+                "library HecatronPoc version '0.1.0'"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "identifier": {
+      "id": "HecatronPoc",
+      "version": "0.1.0"
+    },
+    "schemaIdentifier": {
+      "id": "urn:hl7-org:elm",
+      "version": "r1"
+    },
+    "usings": {
+      "def": [
+        {
+          "localId": "1",
+          "localIdentifier": "System",
+          "uri": "urn:hl7-org:elm-types:r1",
+          "annotation": []
+        }
+      ]
+    },
+    "parameters": {
+      "def": [
+        {
+          "localId": "206",
+          "locator": "3:1-3:32",
+          "name": "SleepDuration",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "206",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "parameter ",
+                      "SleepDuration",
+                      " "
+                    ]
+                  },
+                  {
+                    "r": "207",
+                    "s": [
+                      {
+                        "value": [
+                          "Quantity"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "parameterTypeSpecifier": {
+            "type": "NamedTypeSpecifier",
+            "localId": "207",
+            "locator": "3:25-3:32",
+            "name": "{urn:hl7-org:elm-types:r1}Quantity",
+            "annotation": []
+          }
+        },
+        {
+          "localId": "209",
+          "locator": "4:1-4:28",
+          "name": "SleepPlan",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "209",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "parameter ",
+                      "SleepPlan",
+                      " "
+                    ]
+                  },
+                  {
+                    "r": "210",
+                    "s": [
+                      {
+                        "value": [
+                          "Quantity"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "parameterTypeSpecifier": {
+            "type": "NamedTypeSpecifier",
+            "localId": "210",
+            "locator": "4:21-4:28",
+            "name": "{urn:hl7-org:elm-types:r1}Quantity",
+            "annotation": []
+          }
+        },
+        {
+          "localId": "212",
+          "locator": "5:1-5:29",
+          "name": "ObservedAt",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "212",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "parameter ",
+                      "ObservedAt",
+                      " "
+                    ]
+                  },
+                  {
+                    "r": "213",
+                    "s": [
+                      {
+                        "value": [
+                          "DateTime"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "parameterTypeSpecifier": {
+            "type": "NamedTypeSpecifier",
+            "localId": "213",
+            "locator": "5:22-5:29",
+            "name": "{urn:hl7-org:elm-types:r1}DateTime",
+            "annotation": []
+          }
+        },
+        {
+          "localId": "215",
+          "locator": "6:1-6:33",
+          "name": "EvaluationTime",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "215",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "parameter ",
+                      "EvaluationTime",
+                      " "
+                    ]
+                  },
+                  {
+                    "r": "216",
+                    "s": [
+                      {
+                        "value": [
+                          "DateTime"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "parameterTypeSpecifier": {
+            "type": "NamedTypeSpecifier",
+            "localId": "216",
+            "locator": "6:26-6:33",
+            "name": "{urn:hl7-org:elm-types:r1}DateTime",
+            "annotation": []
+          }
+        },
+        {
+          "localId": "218",
+          "locator": "7:1-7:33",
+          "name": "ReportedFatigue",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "218",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "parameter ",
+                      "ReportedFatigue",
+                      " "
+                    ]
+                  },
+                  {
+                    "r": "219",
+                    "s": [
+                      {
+                        "value": [
+                          "Boolean"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "parameterTypeSpecifier": {
+            "type": "NamedTypeSpecifier",
+            "localId": "219",
+            "locator": "7:27-7:33",
+            "name": "{urn:hl7-org:elm-types:r1}Boolean",
+            "annotation": []
+          }
+        },
+        {
+          "localId": "221",
+          "locator": "8:1-8:41",
+          "name": "CompletionCoverageKnown",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "221",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "parameter ",
+                      "CompletionCoverageKnown",
+                      " "
+                    ]
+                  },
+                  {
+                    "r": "222",
+                    "s": [
+                      {
+                        "value": [
+                          "Boolean"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "parameterTypeSpecifier": {
+            "type": "NamedTypeSpecifier",
+            "localId": "222",
+            "locator": "8:35-8:41",
+            "name": "{urn:hl7-org:elm-types:r1}Boolean",
+            "annotation": []
+          }
+        },
+        {
+          "localId": "224",
+          "locator": "9:1-9:36",
+          "name": "CompletionRecorded",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "224",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "parameter ",
+                      "CompletionRecorded",
+                      " "
+                    ]
+                  },
+                  {
+                    "r": "225",
+                    "s": [
+                      {
+                        "value": [
+                          "Boolean"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "parameterTypeSpecifier": {
+            "type": "NamedTypeSpecifier",
+            "localId": "225",
+            "locator": "9:30-9:36",
+            "name": "{urn:hl7-org:elm-types:r1}Boolean",
+            "annotation": []
+          }
+        },
+        {
+          "localId": "227",
+          "locator": "10:1-10:34",
+          "name": "BaselineStrength",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "227",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "parameter ",
+                      "BaselineStrength",
+                      " "
+                    ]
+                  },
+                  {
+                    "r": "228",
+                    "s": [
+                      {
+                        "value": [
+                          "Decimal"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "parameterTypeSpecifier": {
+            "type": "NamedTypeSpecifier",
+            "localId": "228",
+            "locator": "10:28-10:34",
+            "name": "{urn:hl7-org:elm-types:r1}Decimal",
+            "annotation": []
+          }
+        },
+        {
+          "localId": "230",
+          "locator": "11:1-11:33",
+          "name": "CurrentStrength",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "230",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "parameter ",
+                      "CurrentStrength",
+                      " "
+                    ]
+                  },
+                  {
+                    "r": "231",
+                    "s": [
+                      {
+                        "value": [
+                          "Decimal"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "parameterTypeSpecifier": {
+            "type": "NamedTypeSpecifier",
+            "localId": "231",
+            "locator": "11:27-11:33",
+            "name": "{urn:hl7-org:elm-types:r1}Decimal",
+            "annotation": []
+          }
+        }
+      ]
+    },
+    "contexts": {
+      "def": [
+        {
+          "localId": "233",
+          "locator": "13:1-13:18",
+          "name": "Unfiltered",
+          "annotation": []
+        }
+      ]
+    },
+    "statements": {
+      "def": [
+        {
+          "localId": "236",
+          "locator": "15:1-16:24",
+          "name": "ClockMatchesSnapshot",
+          "context": "Unfiltered",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "236",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "define ",
+                      "ClockMatchesSnapshot",
+                      ":\n  "
+                    ]
+                  },
+                  {
+                    "r": "237",
+                    "s": [
+                      {
+                        "r": "240",
+                        "s": [
+                          {
+                            "value": [
+                              "Now",
+                              "()"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "value": [
+                          " ",
+                          "=",
+                          " "
+                        ]
+                      },
+                      {
+                        "r": "241",
+                        "s": [
+                          {
+                            "value": [
+                              "EvaluationTime"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "expression": {
+            "type": "Equal",
+            "localId": "237",
+            "locator": "16:3-16:24",
+            "annotation": [],
+            "signature": [
+              {
+                "type": "NamedTypeSpecifier",
+                "localId": "242",
+                "name": "{urn:hl7-org:elm-types:r1}DateTime",
+                "annotation": []
+              },
+              {
+                "type": "NamedTypeSpecifier",
+                "localId": "243",
+                "name": "{urn:hl7-org:elm-types:r1}DateTime",
+                "annotation": []
+              }
+            ],
+            "operand": [
+              {
+                "type": "Now",
+                "localId": "240",
+                "locator": "16:3-16:7",
+                "annotation": [],
+                "signature": []
+              },
+              {
+                "type": "ParameterRef",
+                "localId": "241",
+                "locator": "16:11-16:24",
+                "name": "EvaluationTime",
+                "annotation": []
+              }
+            ]
+          }
+        },
+        {
+          "localId": "246",
+          "locator": "18:1-20:73",
+          "name": "ObservationFresh",
+          "context": "Unfiltered",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "246",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "define ",
+                      "ObservationFresh",
+                      ":\n  "
+                    ]
+                  },
+                  {
+                    "r": "247",
+                    "s": [
+                      {
+                        "r": "250",
+                        "s": [
+                          {
+                            "r": "248",
+                            "s": [
+                              {
+                                "value": [
+                                  "ObservedAt"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "value": [
+                              " is not null"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "value": [
+                          "\n    and "
+                        ]
+                      },
+                      {
+                        "r": "259",
+                        "s": [
+                          {
+                            "r": "251",
+                            "s": [
+                              {
+                                "value": [
+                                  "ObservedAt"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "value": [
+                              " in "
+                            ]
+                          },
+                          {
+                            "r": "258",
+                            "s": [
+                              {
+                                "value": [
+                                  "Interval["
+                                ]
+                              },
+                              {
+                                "r": "252",
+                                "s": [
+                                  {
+                                    "r": "253",
+                                    "s": [
+                                      {
+                                        "value": [
+                                          "EvaluationTime"
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "value": [
+                                      " - "
+                                    ]
+                                  },
+                                  {
+                                    "r": "254",
+                                    "s": [
+                                      {
+                                        "value": [
+                                          "24 ",
+                                          "hours"
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "value": [
+                                  ", "
+                                ]
+                              },
+                              {
+                                "r": "257",
+                                "s": [
+                                  {
+                                    "value": [
+                                      "EvaluationTime"
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "value": [
+                                  "]"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "expression": {
+            "type": "And",
+            "localId": "247",
+            "locator": "19:3-20:73",
+            "annotation": [],
+            "signature": [],
+            "operand": [
+              {
+                "type": "Not",
+                "localId": "250",
+                "locator": "19:3-19:24",
+                "annotation": [],
+                "signature": [],
+                "operand": {
+                  "type": "IsNull",
+                  "localId": "249",
+                  "locator": "19:3-19:24",
+                  "annotation": [],
+                  "signature": [],
+                  "operand": {
+                    "type": "ParameterRef",
+                    "localId": "248",
+                    "locator": "19:3-19:12",
+                    "name": "ObservedAt",
+                    "annotation": []
+                  }
+                }
+              },
+              {
+                "type": "In",
+                "localId": "259",
+                "locator": "20:9-20:73",
+                "annotation": [],
+                "signature": [],
+                "operand": [
+                  {
+                    "type": "ParameterRef",
+                    "localId": "251",
+                    "locator": "20:9-20:18",
+                    "name": "ObservedAt",
+                    "annotation": []
+                  },
+                  {
+                    "type": "Interval",
+                    "localId": "258",
+                    "locator": "20:23-20:73",
+                    "lowClosed": true,
+                    "highClosed": true,
+                    "annotation": [],
+                    "low": {
+                      "type": "Subtract",
+                      "localId": "252",
+                      "locator": "20:32-20:56",
+                      "annotation": [],
+                      "signature": [
+                        {
+                          "type": "NamedTypeSpecifier",
+                          "localId": "255",
+                          "name": "{urn:hl7-org:elm-types:r1}DateTime",
+                          "annotation": []
+                        },
+                        {
+                          "type": "NamedTypeSpecifier",
+                          "localId": "256",
+                          "name": "{urn:hl7-org:elm-types:r1}Quantity",
+                          "annotation": []
+                        }
+                      ],
+                      "operand": [
+                        {
+                          "type": "ParameterRef",
+                          "localId": "253",
+                          "locator": "20:32-20:45",
+                          "name": "EvaluationTime",
+                          "annotation": []
+                        },
+                        {
+                          "type": "Quantity",
+                          "localId": "254",
+                          "locator": "20:49-20:56",
+                          "value": 24,
+                          "unit": "hours",
+                          "annotation": []
+                        }
+                      ]
+                    },
+                    "high": {
+                      "type": "ParameterRef",
+                      "localId": "257",
+                      "locator": "20:59-20:72",
+                      "name": "EvaluationTime",
+                      "annotation": []
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "localId": "262",
+          "locator": "22:1-24:22",
+          "name": "SleepBelowPlan",
+          "context": "Unfiltered",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "262",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "define ",
+                      "SleepBelowPlan",
+                      ":\n  "
+                    ]
+                  },
+                  {
+                    "r": "263",
+                    "s": [
+                      {
+                        "value": [
+                          "if "
+                        ]
+                      },
+                      {
+                        "r": "264",
+                        "s": [
+                          {
+                            "value": [
+                              "ObservationFresh"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "value": [
+                          " then "
+                        ]
+                      },
+                      {
+                        "r": "265",
+                        "s": [
+                          {
+                            "r": "266",
+                            "s": [
+                              {
+                                "value": [
+                                  "SleepDuration"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "value": [
+                              " ",
+                              "<",
+                              " "
+                            ]
+                          },
+                          {
+                            "r": "267",
+                            "s": [
+                              {
+                                "value": [
+                                  "SleepPlan"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "value": [
+                          "\n  else "
+                        ]
+                      },
+                      {
+                        "r": "270",
+                        "s": [
+                          {
+                            "r": "271",
+                            "value": [
+                              "null",
+                              " as "
+                            ]
+                          },
+                          {
+                            "r": "272",
+                            "s": [
+                              {
+                                "value": [
+                                  "Boolean"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "expression": {
+            "type": "If",
+            "localId": "263",
+            "locator": "23:3-24:22",
+            "annotation": [],
+            "condition": {
+              "type": "ExpressionRef",
+              "localId": "264",
+              "locator": "23:6-23:21",
+              "name": "ObservationFresh",
+              "annotation": []
+            },
+            "then": {
+              "type": "Less",
+              "localId": "265",
+              "locator": "23:28-23:52",
+              "annotation": [],
+              "signature": [
+                {
+                  "type": "NamedTypeSpecifier",
+                  "localId": "268",
+                  "name": "{urn:hl7-org:elm-types:r1}Quantity",
+                  "annotation": []
+                },
+                {
+                  "type": "NamedTypeSpecifier",
+                  "localId": "269",
+                  "name": "{urn:hl7-org:elm-types:r1}Quantity",
+                  "annotation": []
+                }
+              ],
+              "operand": [
+                {
+                  "type": "ParameterRef",
+                  "localId": "266",
+                  "locator": "23:28-23:40",
+                  "name": "SleepDuration",
+                  "annotation": []
+                },
+                {
+                  "type": "ParameterRef",
+                  "localId": "267",
+                  "locator": "23:44-23:52",
+                  "name": "SleepPlan",
+                  "annotation": []
+                }
+              ]
+            },
+            "else": {
+              "type": "As",
+              "localId": "270",
+              "locator": "24:8-24:22",
+              "strict": false,
+              "annotation": [],
+              "signature": [],
+              "operand": {
+                "type": "Null",
+                "localId": "271",
+                "locator": "24:8-24:11",
+                "annotation": []
+              },
+              "asTypeSpecifier": {
+                "type": "NamedTypeSpecifier",
+                "localId": "272",
+                "locator": "24:16-24:22",
+                "name": "{urn:hl7-org:elm-types:r1}Boolean",
+                "annotation": []
+              }
+            }
+          }
+        },
+        {
+          "localId": "275",
+          "locator": "26:1-27:36",
+          "name": "CombinedReview",
+          "context": "Unfiltered",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "275",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "define ",
+                      "CombinedReview",
+                      ":\n  "
+                    ]
+                  },
+                  {
+                    "r": "276",
+                    "s": [
+                      {
+                        "r": "277",
+                        "s": [
+                          {
+                            "value": [
+                              "SleepBelowPlan"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "value": [
+                          " and "
+                        ]
+                      },
+                      {
+                        "r": "278",
+                        "s": [
+                          {
+                            "value": [
+                              "ReportedFatigue"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "expression": {
+            "type": "And",
+            "localId": "276",
+            "locator": "27:3-27:36",
+            "annotation": [],
+            "signature": [],
+            "operand": [
+              {
+                "type": "ExpressionRef",
+                "localId": "277",
+                "locator": "27:3-27:16",
+                "name": "SleepBelowPlan",
+                "annotation": []
+              },
+              {
+                "type": "ParameterRef",
+                "localId": "278",
+                "locator": "27:22-27:36",
+                "name": "ReportedFatigue",
+                "annotation": []
+              }
+            ]
+          }
+        },
+        {
+          "localId": "281",
+          "locator": "29:1-31:22",
+          "name": "CompletionNotRecorded",
+          "context": "Unfiltered",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "281",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "define ",
+                      "CompletionNotRecorded",
+                      ":\n  "
+                    ]
+                  },
+                  {
+                    "r": "282",
+                    "s": [
+                      {
+                        "value": [
+                          "if "
+                        ]
+                      },
+                      {
+                        "r": "283",
+                        "s": [
+                          {
+                            "value": [
+                              "CompletionCoverageKnown"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "value": [
+                          " then "
+                        ]
+                      },
+                      {
+                        "r": "284",
+                        "s": [
+                          {
+                            "value": [
+                              "not "
+                            ]
+                          },
+                          {
+                            "r": "285",
+                            "s": [
+                              {
+                                "value": [
+                                  "CompletionRecorded"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "value": [
+                          "\n  else "
+                        ]
+                      },
+                      {
+                        "r": "286",
+                        "s": [
+                          {
+                            "r": "287",
+                            "value": [
+                              "null",
+                              " as "
+                            ]
+                          },
+                          {
+                            "r": "288",
+                            "s": [
+                              {
+                                "value": [
+                                  "Boolean"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "expression": {
+            "type": "If",
+            "localId": "282",
+            "locator": "30:3-31:22",
+            "annotation": [],
+            "condition": {
+              "type": "ParameterRef",
+              "localId": "283",
+              "locator": "30:6-30:28",
+              "name": "CompletionCoverageKnown",
+              "annotation": []
+            },
+            "then": {
+              "type": "Not",
+              "localId": "284",
+              "locator": "30:35-30:56",
+              "annotation": [],
+              "signature": [],
+              "operand": {
+                "type": "ParameterRef",
+                "localId": "285",
+                "locator": "30:39-30:56",
+                "name": "CompletionRecorded",
+                "annotation": []
+              }
+            },
+            "else": {
+              "type": "As",
+              "localId": "286",
+              "locator": "31:8-31:22",
+              "strict": false,
+              "annotation": [],
+              "signature": [],
+              "operand": {
+                "type": "Null",
+                "localId": "287",
+                "locator": "31:8-31:11",
+                "annotation": []
+              },
+              "asTypeSpecifier": {
+                "type": "NamedTypeSpecifier",
+                "localId": "288",
+                "locator": "31:16-31:22",
+                "name": "{urn:hl7-org:elm-types:r1}Boolean",
+                "annotation": []
+              }
+            }
+          }
+        },
+        {
+          "localId": "291",
+          "locator": "33:1-35:22",
+          "name": "StrengthRatio",
+          "context": "Unfiltered",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "291",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "define ",
+                      "StrengthRatio",
+                      ":\n  "
+                    ]
+                  },
+                  {
+                    "r": "292",
+                    "s": [
+                      {
+                        "value": [
+                          "if "
+                        ]
+                      },
+                      {
+                        "r": "293",
+                        "s": [
+                          {
+                            "r": "294",
+                            "s": [
+                              {
+                                "value": [
+                                  "BaselineStrength"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "r": "295",
+                            "value": [
+                              " ",
+                              ">",
+                              " ",
+                              "0.0"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "value": [
+                          " then "
+                        ]
+                      },
+                      {
+                        "r": "298",
+                        "s": [
+                          {
+                            "r": "299",
+                            "s": [
+                              {
+                                "value": [
+                                  "CurrentStrength"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "value": [
+                              " / "
+                            ]
+                          },
+                          {
+                            "r": "300",
+                            "s": [
+                              {
+                                "value": [
+                                  "BaselineStrength"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "value": [
+                          "\n  else "
+                        ]
+                      },
+                      {
+                        "r": "303",
+                        "s": [
+                          {
+                            "r": "304",
+                            "value": [
+                              "null",
+                              " as "
+                            ]
+                          },
+                          {
+                            "r": "305",
+                            "s": [
+                              {
+                                "value": [
+                                  "Decimal"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "expression": {
+            "type": "If",
+            "localId": "292",
+            "locator": "34:3-35:22",
+            "annotation": [],
+            "condition": {
+              "type": "Greater",
+              "localId": "293",
+              "locator": "34:6-34:27",
+              "annotation": [],
+              "signature": [
+                {
+                  "type": "NamedTypeSpecifier",
+                  "localId": "296",
+                  "name": "{urn:hl7-org:elm-types:r1}Decimal",
+                  "annotation": []
+                },
+                {
+                  "type": "NamedTypeSpecifier",
+                  "localId": "297",
+                  "name": "{urn:hl7-org:elm-types:r1}Decimal",
+                  "annotation": []
+                }
+              ],
+              "operand": [
+                {
+                  "type": "ParameterRef",
+                  "localId": "294",
+                  "locator": "34:6-34:21",
+                  "name": "BaselineStrength",
+                  "annotation": []
+                },
+                {
+                  "type": "Literal",
+                  "localId": "295",
+                  "locator": "34:25-34:27",
+                  "valueType": "{urn:hl7-org:elm-types:r1}Decimal",
+                  "value": "0.0",
+                  "annotation": []
+                }
+              ]
+            },
+            "then": {
+              "type": "Divide",
+              "localId": "298",
+              "locator": "34:34-34:67",
+              "annotation": [],
+              "signature": [
+                {
+                  "type": "NamedTypeSpecifier",
+                  "localId": "301",
+                  "name": "{urn:hl7-org:elm-types:r1}Decimal",
+                  "annotation": []
+                },
+                {
+                  "type": "NamedTypeSpecifier",
+                  "localId": "302",
+                  "name": "{urn:hl7-org:elm-types:r1}Decimal",
+                  "annotation": []
+                }
+              ],
+              "operand": [
+                {
+                  "type": "ParameterRef",
+                  "localId": "299",
+                  "locator": "34:34-34:48",
+                  "name": "CurrentStrength",
+                  "annotation": []
+                },
+                {
+                  "type": "ParameterRef",
+                  "localId": "300",
+                  "locator": "34:52-34:67",
+                  "name": "BaselineStrength",
+                  "annotation": []
+                }
+              ]
+            },
+            "else": {
+              "type": "As",
+              "localId": "303",
+              "locator": "35:8-35:22",
+              "strict": false,
+              "annotation": [],
+              "signature": [],
+              "operand": {
+                "type": "Null",
+                "localId": "304",
+                "locator": "35:8-35:11",
+                "annotation": []
+              },
+              "asTypeSpecifier": {
+                "type": "NamedTypeSpecifier",
+                "localId": "305",
+                "locator": "35:16-35:22",
+                "name": "{urn:hl7-org:elm-types:r1}Decimal",
+                "annotation": []
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

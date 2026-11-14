@@ -1,0 +1,11 @@
+{
+  "appId": "org.hecatron.poc",
+  "appName": "Hecatron POC",
+  "webDir": "dist",
+  "plugins": {
+    "LocalNotifications": {
+      "smallIcon": "ic_stat_hecatron",
+      "iconColor": "#1b7465"
+    }
+  }
+}

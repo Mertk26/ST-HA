@@ -1,0 +1,9 @@
+{
+  "library": "Hecatron",
+  "version": "0.1.0",
+  "compiler": "@cqframework/cql@5.6.1",
+  "runtime": "cql-execution@3.3.2",
+  "sourceSha256": "d4f7d94fafed75449d713949f5c24f53b4d3c91df4e8969b17ddd9e8d54244b1",
+  "elmSha256": "f33800816c7771993a083c50331f64441520d8edff6128daf3f59455305fb78c",
+  "authority": "Synthetic demonstration; parameter-only System model; not clinically authorized"
+}

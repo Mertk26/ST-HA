@@ -1,0 +1,827 @@
+[
+    {
+        "path":  ".gitignore",
+        "bytes":  152,
+        "sha256":  "ade9b79a70c8bc570772c828b7873b83cfa0abc39260bf4950aa5c63a543525a"
+    },
+    {
+        "path":  "android\\.gitignore",
+        "bytes":  1824,
+        "sha256":  "065e4a92a240fe11a0ea230491ad9dabef143f5fd5a3e6884ad6f0395666a971"
+    },
+    {
+        "path":  "android\\app\\.gitignore",
+        "bytes":  26,
+        "sha256":  "99c54e51ee601a60fbde8016b2cbf717483bc2e92773be86c9247d02a7fa6ea4"
+    },
+    {
+        "path":  "android\\app\\build.gradle",
+        "bytes":  2132,
+        "sha256":  "35bc7b184d97c600d98730e9c3787577f7a8ed27fdfd644e5869c0e8e52969e0"
+    },
+    {
+        "path":  "android\\app\\capacitor.build.gradle",
+        "bytes":  430,
+        "sha256":  "422c0dc76e201c5755c32493a208916666bfdd3b9e8a0dfeaea9a029b563dcd6"
+    },
+    {
+        "path":  "android\\app\\proguard-rules.pro",
+        "bytes":  751,
+        "sha256":  "1cf8c57e8f79c250b0af9c1a5a4edad71a5c348a79ab70243b6bae086c150ad2"
+    },
+    {
+        "path":  "android\\app\\src\\androidTest\\java\\com\\getcapacitor\\myapp\\ExampleInstrumentedTest.java",
+        "bytes":  774,
+        "sha256":  "ff50b4c110a7434312f9af54171f9e8523b015836f707c9b387b76d4c38a97f8"
+    },
+    {
+        "path":  "android\\app\\src\\main\\AndroidManifest.xml",
+        "bytes":  1688,
+        "sha256":  "690995468fc5ada580e320f4624f2a6404b0c11f7d75ed9905ef555afd162e42"
+    },
+    {
+        "path":  "android\\app\\src\\main\\java\\org\\hecatron\\demo\\MainActivity.java",
+        "bytes":  121,
+        "sha256":  "7e0692a679833dc81f4356264a9b6957c622ecdbf312b62022e642057819c09b"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml",
+        "bytes":  5606,
+        "sha256":  "718ba51adf166bb55c3e9936bb8199a0148457f7f0191aaa2f37a94f3159d6ec"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\drawable\\ic_stat_hecatron.xml",
+        "bytes":  313,
+        "sha256":  "6462150b0544aea800518c6eb7de9bb7438355effef151a33f2543fe52c7a5f4"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\drawable\\splash.png",
+        "bytes":  4040,
+        "sha256":  "5cf98b4451bd99b20df26f9e608a46946118be6b0ae90762f9ca1786a30c76ff"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\drawable-land-hdpi\\splash.png",
+        "bytes":  7705,
+        "sha256":  "08cc34ad7713fe7ed58bceaa37b2387b670c53cd60264b4bd6442db3098e75dc"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\drawable-land-mdpi\\splash.png",
+        "bytes":  4040,
+        "sha256":  "5cf98b4451bd99b20df26f9e608a46946118be6b0ae90762f9ca1786a30c76ff"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\drawable-land-xhdpi\\splash.png",
+        "bytes":  9251,
+        "sha256":  "22f87e1e3bc89aa01a7dbc39c9a4db058cd0bf4ad3fe9f55712bf69eb997f4bf"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\drawable-land-xxhdpi\\splash.png",
+        "bytes":  13984,
+        "sha256":  "42aa26392546fcdee1b8d3ac6d4b41bfcceb41dc6a4f3a3c30c24a8a8f4db862"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\drawable-land-xxxhdpi\\splash.png",
+        "bytes":  17683,
+        "sha256":  "60393ce8636fd263e4e1fea3fd4ab2de948c6295e898fda9b50ac4e5283be809"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\drawable-port-hdpi\\splash.png",
+        "bytes":  7934,
+        "sha256":  "c5015f4ba3628392b538386c5e210f0b94f352a3160adab934fd0311972137ca"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\drawable-port-mdpi\\splash.png",
+        "bytes":  4096,
+        "sha256":  "07fa579e1c83e04ba7f9cbcbfcf41b68e15fe3638f2c44a04e58b809103e6b69"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\drawable-port-xhdpi\\splash.png",
+        "bytes":  9875,
+        "sha256":  "b73049cb37fe76d6c11b87a796766bf6af0c85483b31eb6a921657b0d764a4b9"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\drawable-port-xxhdpi\\splash.png",
+        "bytes":  13346,
+        "sha256":  "0c7f1212f25b7b90e9a6e1d320013e4ff3d3e03e634cbb07b7b7981cac51627f"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\drawable-port-xxxhdpi\\splash.png",
+        "bytes":  17489,
+        "sha256":  "3db071a03b2f8ffe0dfd4170fc59842d53cd15bba5e88af59401d58efabf7827"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml",
+        "bytes":  1880,
+        "sha256":  "a8514094f754b099d3e55ce1d6e0b2de79db418b2eeacb0fc2a6bb0bfadef221"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\layout\\activity_main.xml",
+        "bytes":  535,
+        "sha256":  "5d770feb791313b947020cbfc57e5c733c556dac5e9e49261a1190e527073253"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml",
+        "bytes":  265,
+        "sha256":  "9c3a7e0a6515c6e1a7ae834a9ae430311ebc3241f7b2e5e7f0460aa690709a7c"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml",
+        "bytes":  265,
+        "sha256":  "9c3a7e0a6515c6e1a7ae834a9ae430311ebc3241f7b2e5e7f0460aa690709a7c"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png",
+        "bytes":  2786,
+        "sha256":  "72b71c3581ca3b5a23b1c168d69b9d855b3f184fa079902a01f088eb4f0607d5"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png",
+        "bytes":  3450,
+        "sha256":  "32baa10d2632a4417454a579f992bd640e0a3cec79321423559b2c9940de58a9"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png",
+        "bytes":  4341,
+        "sha256":  "bfcc1b0fa931b14bb241372c76ab4f04374b67d02363c98d9cb12edfdacdf5f3"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png",
+        "bytes":  1869,
+        "sha256":  "27ed3603010ebc278f64f8645741ab132ff517abb5308eb9df6c8e42a48956b2"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png",
+        "bytes":  2110,
+        "sha256":  "58e78a618778926b1f6d9472a6468de878de8530970934e94aab5ba4ba08cc00"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png",
+        "bytes":  2725,
+        "sha256":  "0166fc333074c373fbd0ce6b5defd71552166165ac778121ca9c9dff6b83f0fc"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png",
+        "bytes":  3981,
+        "sha256":  "d35dbfff175b83c13ef59cf924abfc810f7b6a158595d7417c5498ea8c7c7ed1"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png",
+        "bytes":  5036,
+        "sha256":  "6f88083b8166cc559102f7044688de7525287632ebe09ac45d001ac8bf4b3eae"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png",
+        "bytes":  6593,
+        "sha256":  "40911a00922868686854a4804b93fd6e56b503664696de03f450bff690affb6d"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png",
+        "bytes":  6644,
+        "sha256":  "ed346eb1e3f0280f15709393705899b3ff55c20b88f4e0308006b3c33cf5fe14"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png",
+        "bytes":  9793,
+        "sha256":  "4a82bc1e9923576275869998925ce0ae021a79aa18b24a0dd87ad6b61ca85053"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png",
+        "bytes":  10455,
+        "sha256":  "1ee4cd9ff371dcb2e3938097e434f6fb8731688ed7165e61fc63693ad5b2f455"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png",
+        "bytes":  9441,
+        "sha256":  "87cb2f2ffe992652bb4fa768c73719a37b5852ab17fbf8e170e888f7a42b0761"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png",
+        "bytes":  15529,
+        "sha256":  "bd24fd383253bf8d43f0a81f11c071d76d1d555114376dd647cd9fb38fa0a9da"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png",
+        "bytes":  15916,
+        "sha256":  "ab93096331e7cd8ec379f73f1e9adcaaa9ee1115c9f4ff10411a811fb9700174"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\values\\ic_launcher_background.xml",
+        "bytes":  120,
+        "sha256":  "cd40bafe618ff506f4088778b135cb4faa15f25e0c9b475e22d730c74b7be115"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\values\\strings.xml",
+        "bytes":  307,
+        "sha256":  "b53deeb16c0521fabcbbb96356a72d7e14beee92ffac467eab11c1967f4d4f46"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\values\\styles.xml",
+        "bytes":  823,
+        "sha256":  "18ebba36575e9461347ee67361b23caf095f158ee85dbefe1b83a4669ba5bd6c"
+    },
+    {
+        "path":  "android\\app\\src\\main\\res\\xml\\file_paths.xml",
+        "bytes":  213,
+        "sha256":  "a46ed43ef65c90cb6778f4581decf3556e3f0055aad8f36d69dae16f9a0e99aa"
+    },
+    {
+        "path":  "android\\app\\src\\test\\java\\com\\getcapacitor\\myapp\\ExampleUnitTest.java",
+        "bytes":  402,
+        "sha256":  "d4045ae8fac1f0807e6b24eb34e68409a9a235df9d1a3f896fb8c9a49424363d"
+    },
+    {
+        "path":  "android\\build.gradle",
+        "bytes":  637,
+        "sha256":  "46ade7db7afeb8049ccea59fce83095dca736ceb8c9acd79cc944e988c3357d9"
+    },
+    {
+        "path":  "android\\capacitor.settings.gradle",
+        "bytes":  371,
+        "sha256":  "a49233a6ea4409443022b8b0d4b8aec2ffd42bec99edc35e14d02e2ebd3faf97"
+    },
+    {
+        "path":  "android\\gradle.properties",
+        "bytes":  987,
+        "sha256":  "3bab15c5b8bc4c2f4b6cf525497d15ad4abca53a460e6dd2eb0f0135817d31e6"
+    },
+    {
+        "path":  "android\\gradle\\wrapper\\gradle-wrapper.jar",
+        "bytes":  43764,
+        "sha256":  "7d3a4ac4de1c32b59bc6a4eb8ecb8e612ccd0cf1ae1e99f66902da64df296172"
+    },
+    {
+        "path":  "android\\gradle\\wrapper\\gradle-wrapper.properties",
+        "bytes":  253,
+        "sha256":  "9a479a85aa879bb55284fc16d0de5b81a745c3854f4e2d88c42e7debaf007435"
+    },
+    {
+        "path":  "android\\gradlew",
+        "bytes":  8733,
+        "sha256":  "b187b4c52e749f5760afdd6fadc31b2a98ad35fb249bf0dff03b72650f320409"
+    },
+    {
+        "path":  "android\\gradlew.bat",
+        "bytes":  2937,
+        "sha256":  "1d297e00bd21de3ace22b4d7f2de1f9dfa858883d66bbf7c1ccbecccec8f4f3b"
+    },
+    {
+        "path":  "android\\settings.gradle",
+        "bytes":  208,
+        "sha256":  "6ce098d15ebd69b44c4ecd786bca1bdc366340d2459b2af4d7bb0ab317aa9669"
+    },
+    {
+        "path":  "android\\variables.gradle",
+        "bytes":  498,
+        "sha256":  "83d502c9ed8fcf1dd4791482067abeedbebae49fafe9cd14a8a1f5891deb0d88"
+    },
+    {
+        "path":  "browser-tests\\journey.spec.ts",
+        "bytes":  16765,
+        "sha256":  "9d428cda509ccaadf48aa2d40297a3e4c52744cd5de3bf2de1928dc537f1fd6b"
+    },
+    {
+        "path":  "capacitor.config.json",
+        "bytes":  214,
+        "sha256":  "d8542e8eff49b93d181baa6650857465e092e2e8bcdb3b497cab28b0dc7ac178"
+    },
+    {
+        "path":  "index.html",
+        "bytes":  563,
+        "sha256":  "65177b3c16619f09c1951922684f301e2b1b55e185002c157de6792bb96a22f9"
+    },
+    {
+        "path":  "knowledge\\Hecatron.cql",
+        "bytes":  1736,
+        "sha256":  "d4f7d94fafed75449d713949f5c24f53b4d3c91df4e8969b17ddd9e8d54244b1"
+    },
+    {
+        "path":  "package.json",
+        "bytes":  1337,
+        "sha256":  "c9498286eeab886c36b5a3eb45b418e1a24816dedf214fe7c0eafe2c0c1e51ea"
+    },
+    {
+        "path":  "package-lock.json",
+        "bytes":  100435,
+        "sha256":  "abaec175c3e222036ff0454deb48b39996c6e7cade7b16fc1505748656d5ac45"
+    },
+    {
+        "path":  "playwright.config.ts",
+        "bytes":  644,
+        "sha256":  "9f031557284cc85f4973ed26e4a1732126d7da71d2ee595129726785fd73345a"
+    },
+    {
+        "path":  "poc\\android\\.gitignore",
+        "bytes":  1824,
+        "sha256":  "065e4a92a240fe11a0ea230491ad9dabef143f5fd5a3e6884ad6f0395666a971"
+    },
+    {
+        "path":  "poc\\android\\app\\.gitignore",
+        "bytes":  26,
+        "sha256":  "99c54e51ee601a60fbde8016b2cbf717483bc2e92773be86c9247d02a7fa6ea4"
+    },
+    {
+        "path":  "poc\\android\\app\\build.gradle",
+        "bytes":  2130,
+        "sha256":  "3f13b479eb84807fda80e6a66652af03f12a7de69aae199ff5701e3297f18532"
+    },
+    {
+        "path":  "poc\\android\\app\\capacitor.build.gradle",
+        "bytes":  430,
+        "sha256":  "422c0dc76e201c5755c32493a208916666bfdd3b9e8a0dfeaea9a029b563dcd6"
+    },
+    {
+        "path":  "poc\\android\\app\\proguard-rules.pro",
+        "bytes":  751,
+        "sha256":  "1cf8c57e8f79c250b0af9c1a5a4edad71a5c348a79ab70243b6bae086c150ad2"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\androidTest\\java\\com\\getcapacitor\\myapp\\ExampleInstrumentedTest.java",
+        "bytes":  774,
+        "sha256":  "ff50b4c110a7434312f9af54171f9e8523b015836f707c9b387b76d4c38a97f8"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\AndroidManifest.xml",
+        "bytes":  1687,
+        "sha256":  "08fc89a7a4b8203e760922f7846d1073ac187ecf628fb5677787f76fd3ace921"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\java\\org\\hecatron\\poc\\MainActivity.java",
+        "bytes":  120,
+        "sha256":  "8ee3f8051068eb2dc6540c9328ab69409449b2453fb3bffce217b38a690d683c"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml",
+        "bytes":  5606,
+        "sha256":  "718ba51adf166bb55c3e9936bb8199a0148457f7f0191aaa2f37a94f3159d6ec"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\drawable\\ic_stat_hecatron.xml",
+        "bytes":  313,
+        "sha256":  "6462150b0544aea800518c6eb7de9bb7438355effef151a33f2543fe52c7a5f4"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\drawable\\splash.png",
+        "bytes":  4040,
+        "sha256":  "5cf98b4451bd99b20df26f9e608a46946118be6b0ae90762f9ca1786a30c76ff"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\drawable-land-hdpi\\splash.png",
+        "bytes":  7705,
+        "sha256":  "08cc34ad7713fe7ed58bceaa37b2387b670c53cd60264b4bd6442db3098e75dc"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\drawable-land-mdpi\\splash.png",
+        "bytes":  4040,
+        "sha256":  "5cf98b4451bd99b20df26f9e608a46946118be6b0ae90762f9ca1786a30c76ff"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\drawable-land-xhdpi\\splash.png",
+        "bytes":  9251,
+        "sha256":  "22f87e1e3bc89aa01a7dbc39c9a4db058cd0bf4ad3fe9f55712bf69eb997f4bf"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\drawable-land-xxhdpi\\splash.png",
+        "bytes":  13984,
+        "sha256":  "42aa26392546fcdee1b8d3ac6d4b41bfcceb41dc6a4f3a3c30c24a8a8f4db862"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\drawable-land-xxxhdpi\\splash.png",
+        "bytes":  17683,
+        "sha256":  "60393ce8636fd263e4e1fea3fd4ab2de948c6295e898fda9b50ac4e5283be809"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\drawable-port-hdpi\\splash.png",
+        "bytes":  7934,
+        "sha256":  "c5015f4ba3628392b538386c5e210f0b94f352a3160adab934fd0311972137ca"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\drawable-port-mdpi\\splash.png",
+        "bytes":  4096,
+        "sha256":  "07fa579e1c83e04ba7f9cbcbfcf41b68e15fe3638f2c44a04e58b809103e6b69"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\drawable-port-xhdpi\\splash.png",
+        "bytes":  9875,
+        "sha256":  "b73049cb37fe76d6c11b87a796766bf6af0c85483b31eb6a921657b0d764a4b9"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\drawable-port-xxhdpi\\splash.png",
+        "bytes":  13346,
+        "sha256":  "0c7f1212f25b7b90e9a6e1d320013e4ff3d3e03e634cbb07b7b7981cac51627f"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\drawable-port-xxxhdpi\\splash.png",
+        "bytes":  17489,
+        "sha256":  "3db071a03b2f8ffe0dfd4170fc59842d53cd15bba5e88af59401d58efabf7827"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml",
+        "bytes":  1880,
+        "sha256":  "a8514094f754b099d3e55ce1d6e0b2de79db418b2eeacb0fc2a6bb0bfadef221"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\layout\\activity_main.xml",
+        "bytes":  535,
+        "sha256":  "5d770feb791313b947020cbfc57e5c733c556dac5e9e49261a1190e527073253"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml",
+        "bytes":  265,
+        "sha256":  "9c3a7e0a6515c6e1a7ae834a9ae430311ebc3241f7b2e5e7f0460aa690709a7c"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml",
+        "bytes":  265,
+        "sha256":  "9c3a7e0a6515c6e1a7ae834a9ae430311ebc3241f7b2e5e7f0460aa690709a7c"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png",
+        "bytes":  2786,
+        "sha256":  "72b71c3581ca3b5a23b1c168d69b9d855b3f184fa079902a01f088eb4f0607d5"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png",
+        "bytes":  3450,
+        "sha256":  "32baa10d2632a4417454a579f992bd640e0a3cec79321423559b2c9940de58a9"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png",
+        "bytes":  4341,
+        "sha256":  "bfcc1b0fa931b14bb241372c76ab4f04374b67d02363c98d9cb12edfdacdf5f3"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png",
+        "bytes":  1869,
+        "sha256":  "27ed3603010ebc278f64f8645741ab132ff517abb5308eb9df6c8e42a48956b2"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png",
+        "bytes":  2110,
+        "sha256":  "58e78a618778926b1f6d9472a6468de878de8530970934e94aab5ba4ba08cc00"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png",
+        "bytes":  2725,
+        "sha256":  "0166fc333074c373fbd0ce6b5defd71552166165ac778121ca9c9dff6b83f0fc"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png",
+        "bytes":  3981,
+        "sha256":  "d35dbfff175b83c13ef59cf924abfc810f7b6a158595d7417c5498ea8c7c7ed1"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png",
+        "bytes":  5036,
+        "sha256":  "6f88083b8166cc559102f7044688de7525287632ebe09ac45d001ac8bf4b3eae"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png",
+        "bytes":  6593,
+        "sha256":  "40911a00922868686854a4804b93fd6e56b503664696de03f450bff690affb6d"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png",
+        "bytes":  6644,
+        "sha256":  "ed346eb1e3f0280f15709393705899b3ff55c20b88f4e0308006b3c33cf5fe14"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png",
+        "bytes":  9793,
+        "sha256":  "4a82bc1e9923576275869998925ce0ae021a79aa18b24a0dd87ad6b61ca85053"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png",
+        "bytes":  10455,
+        "sha256":  "1ee4cd9ff371dcb2e3938097e434f6fb8731688ed7165e61fc63693ad5b2f455"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png",
+        "bytes":  9441,
+        "sha256":  "87cb2f2ffe992652bb4fa768c73719a37b5852ab17fbf8e170e888f7a42b0761"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png",
+        "bytes":  15529,
+        "sha256":  "bd24fd383253bf8d43f0a81f11c071d76d1d555114376dd647cd9fb38fa0a9da"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png",
+        "bytes":  15916,
+        "sha256":  "ab93096331e7cd8ec379f73f1e9adcaaa9ee1115c9f4ff10411a811fb9700174"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\values\\ic_launcher_background.xml",
+        "bytes":  120,
+        "sha256":  "cd40bafe618ff506f4088778b135cb4faa15f25e0c9b475e22d730c74b7be115"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\values\\strings.xml",
+        "bytes":  296,
+        "sha256":  "2ec7e38ad867d64773a6297818789ad2ec3a3eae7fab840a20aac6b834e07740"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\values\\styles.xml",
+        "bytes":  823,
+        "sha256":  "18ebba36575e9461347ee67361b23caf095f158ee85dbefe1b83a4669ba5bd6c"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\main\\res\\xml\\file_paths.xml",
+        "bytes":  213,
+        "sha256":  "a46ed43ef65c90cb6778f4581decf3556e3f0055aad8f36d69dae16f9a0e99aa"
+    },
+    {
+        "path":  "poc\\android\\app\\src\\test\\java\\com\\getcapacitor\\myapp\\ExampleUnitTest.java",
+        "bytes":  402,
+        "sha256":  "d4045ae8fac1f0807e6b24eb34e68409a9a235df9d1a3f896fb8c9a49424363d"
+    },
+    {
+        "path":  "poc\\android\\build.gradle",
+        "bytes":  637,
+        "sha256":  "46ade7db7afeb8049ccea59fce83095dca736ceb8c9acd79cc944e988c3357d9"
+    },
+    {
+        "path":  "poc\\android\\capacitor.settings.gradle",
+        "bytes":  371,
+        "sha256":  "a49233a6ea4409443022b8b0d4b8aec2ffd42bec99edc35e14d02e2ebd3faf97"
+    },
+    {
+        "path":  "poc\\android\\gradle.properties",
+        "bytes":  987,
+        "sha256":  "3bab15c5b8bc4c2f4b6cf525497d15ad4abca53a460e6dd2eb0f0135817d31e6"
+    },
+    {
+        "path":  "poc\\android\\gradle\\wrapper\\gradle-wrapper.jar",
+        "bytes":  43764,
+        "sha256":  "7d3a4ac4de1c32b59bc6a4eb8ecb8e612ccd0cf1ae1e99f66902da64df296172"
+    },
+    {
+        "path":  "poc\\android\\gradle\\wrapper\\gradle-wrapper.properties",
+        "bytes":  253,
+        "sha256":  "9a479a85aa879bb55284fc16d0de5b81a745c3854f4e2d88c42e7debaf007435"
+    },
+    {
+        "path":  "poc\\android\\gradlew",
+        "bytes":  8733,
+        "sha256":  "b187b4c52e749f5760afdd6fadc31b2a98ad35fb249bf0dff03b72650f320409"
+    },
+    {
+        "path":  "poc\\android\\gradlew.bat",
+        "bytes":  2937,
+        "sha256":  "1d297e00bd21de3ace22b4d7f2de1f9dfa858883d66bbf7c1ccbecccec8f4f3b"
+    },
+    {
+        "path":  "poc\\android\\settings.gradle",
+        "bytes":  208,
+        "sha256":  "6ce098d15ebd69b44c4ecd786bca1bdc366340d2459b2af4d7bb0ab317aa9669"
+    },
+    {
+        "path":  "poc\\android\\variables.gradle",
+        "bytes":  498,
+        "sha256":  "83d502c9ed8fcf1dd4791482067abeedbebae49fafe9cd14a8a1f5891deb0d88"
+    },
+    {
+        "path":  "poc\\browser-tests\\poc.spec.ts",
+        "bytes":  1884,
+        "sha256":  "1370394db10b7b0e893399a942ea99b590e668fa7b075489598580e9eff65c4b"
+    },
+    {
+        "path":  "poc\\capacitor.config.json",
+        "bytes":  216,
+        "sha256":  "2e5d91fc8d7606aa6d741e9962c01c4944803c7a96ad4f3863d6cae9e62c0fa5"
+    },
+    {
+        "path":  "poc\\index.html",
+        "bytes":  1807,
+        "sha256":  "7d19168c59799e63c10d80eec9c625547b5e119a6fa0aaf0c0dd639e66dc4a93"
+    },
+    {
+        "path":  "poc\\knowledge\\CQFRAMEWORK-LICENSE",
+        "bytes":  11324,
+        "sha256":  "a8ad31b1c3f40dca5a84119351b8fa8ddc868edd77fad8a8ebf6d8f2d16fa4ae"
+    },
+    {
+        "path":  "poc\\knowledge\\HecatronPoc.cql",
+        "bytes":  966,
+        "sha256":  "7a80d122ab1af9e82fd9e423a9d7ec82908e3eb2f6efba81a9c46bae384e59c6"
+    },
+    {
+        "path":  "poc\\knowledge\\system-modelinfo.xml",
+        "bytes":  2691,
+        "sha256":  "358032d73c989739a09b6c3e06504a2d977c340014c87c60d2dd081ba2ae7d6a"
+    },
+    {
+        "path":  "poc\\package.json",
+        "bytes":  1174,
+        "sha256":  "93435b96864393a8b0f5187329cbb6010cce82c477c1a5be9d5dfd00654f7217"
+    },
+    {
+        "path":  "poc\\package-lock.json",
+        "bytes":  96903,
+        "sha256":  "96392926ab9659595c3ba0c1ae8cb7bcfd6df38a3279b43ec13ced5da1b78bbd"
+    },
+    {
+        "path":  "poc\\playwright.config.ts",
+        "bytes":  579,
+        "sha256":  "2b3e3ef9c77e0197a7d614b5a107c54ea08fc43d33c356a5b321dcd040c9c706"
+    },
+    {
+        "path":  "poc\\README.md",
+        "bytes":  8863,
+        "sha256":  "7ebd809f98459fc4d2d358a069ef8fb1e9a2a4715944728e1e7976009e2e12b0"
+    },
+    {
+        "path":  "poc\\scripts\\android.ps1",
+        "bytes":  2278,
+        "sha256":  "21b74385a0c2b4ac82264ef007a4ad85fe386a07b80b602d357ab010708d296c"
+    },
+    {
+        "path":  "poc\\scripts\\compile-cql.mjs",
+        "bytes":  1937,
+        "sha256":  "76e78fd42cbc783cfd0b39e9e63c812507ce060ed5c543146173146c12dac1ab"
+    },
+    {
+        "path":  "poc\\scripts\\compile-cql.test.mjs",
+        "bytes":  417,
+        "sha256":  "5af8aa68259ded5edb1b6b42a32685cc60a2b2bab32e98c1e2a9d5eadddd1f00"
+    },
+    {
+        "path":  "poc\\src\\engine.test.ts",
+        "bytes":  3235,
+        "sha256":  "873ce604c5736feb7e75ca00fd8d40bfbdf8d17667036723149e989f6d220d94"
+    },
+    {
+        "path":  "poc\\src\\engine.ts",
+        "bytes":  4871,
+        "sha256":  "ddc4fa8fa4b295548868046bde610b5a271cc74f89e1a5969253f5344c9dba52"
+    },
+    {
+        "path":  "poc\\src\\HecatronPoc.elm.json",
+        "bytes":  41341,
+        "sha256":  "c7563bdaf44910b1e9a291fe69c7c4e97da859b887416fd4ae827737cbaea39b"
+    },
+    {
+        "path":  "poc\\src\\knowledge-manifest.json",
+        "bytes":  429,
+        "sha256":  "6fc47f90c3183ba831453ca3c7b3c9522a336f6299b555d5c260c7853fb50880"
+    },
+    {
+        "path":  "poc\\src\\main.ts",
+        "bytes":  3863,
+        "sha256":  "8e4f82e01c9a9588f6ecf849c883a9b36c2ed2aeabba2ff9f5382a7953b7b1f3"
+    },
+    {
+        "path":  "poc\\src\\notifications.test.ts",
+        "bytes":  3267,
+        "sha256":  "e56233f7beb804d1d9a5e148e468ba63a4223fb5606220d893076f300b0daac2"
+    },
+    {
+        "path":  "poc\\src\\notifications.ts",
+        "bytes":  2503,
+        "sha256":  "44468e9b1eead68dd3cf3f2edd9045956bf9b0d034e38e574b196d47aecd0eef"
+    },
+    {
+        "path":  "poc\\src\\style.css",
+        "bytes":  591,
+        "sha256":  "918f8ac040128bc6eee8cf956dc8dc436d1ffd7b3749ec259163a9f64b4e6352"
+    },
+    {
+        "path":  "poc\\tsconfig.json",
+        "bytes":  603,
+        "sha256":  "9db9ada525663c1ff36bf7141916ed75b9d29d3e989a3f47831c1fcef21067f4"
+    },
+    {
+        "path":  "public\\space-tiger-team.jpg",
+        "bytes":  25803,
+        "sha256":  "c60a81b4e033ff1121a919ceb50e0b0ca9a5b0aca1dd95fcfdd13c029a548c21"
+    },
+    {
+        "path":  "README.md",
+        "bytes":  14720,
+        "sha256":  "cf0731020f67b9f2ea765083948669c6098271a85ec38fc7a9d5795f9cfce073"
+    },
+    {
+        "path":  "research\\hecatron-application.md",
+        "bytes":  16173,
+        "sha256":  "581f2713a3bf2d5a820c6d14216a507ac314651a980dd6d0370ecafd5a250c92"
+    },
+    {
+        "path":  "research\\hecatron-inputs.md",
+        "bytes":  25044,
+        "sha256":  "19dfb0ac24ab2221fdb5fff074efc644606ec867571bdf8daa1710160cb00653"
+    },
+    {
+        "path":  "research\\hecatron-interim.md",
+        "bytes":  15744,
+        "sha256":  "97b4030a9c37491092bf0e785e21dc7b960ebf6ce856e8668675f7d27fa6cb5f"
+    },
+    {
+        "path":  "research\\hecatron-knowledge-engine.md",
+        "bytes":  55998,
+        "sha256":  "62b9360cf269d5a83d13dc3fd98172e9ecf51f1895f6b65f6464463638ead150"
+    },
+    {
+        "path":  "research\\hecatron-outputs.md",
+        "bytes":  20373,
+        "sha256":  "a8378d017e7e5e93b2209c7f3e9a0edc52ad8cd57ca329e20a83f82518c0c338"
+    },
+    {
+        "path":  "research\\hecatron-ui.md",
+        "bytes":  13241,
+        "sha256":  "2b41af7f4b8d2aa7db4221f6462262dc9c4eb12dc610870cfbc8efdff1c28350"
+    },
+    {
+        "path":  "research\\README.md",
+        "bytes":  5924,
+        "sha256":  "e2e7bdf3b442c4cd2a1db140a044d23bc0174204d5a229a3fc8e64954d0b0fba"
+    },
+    {
+        "path":  "scripts\\compile-cql.mjs",
+        "bytes":  957,
+        "sha256":  "0da0fb72163ed48b063cec47064dca395e2273ecb3c5ceb78bd894088e1c212c"
+    },
+    {
+        "path":  "src\\App.tsx",
+        "bytes":  27395,
+        "sha256":  "5cc24803fb454f93cfd83a9cf66ff9b874da0719bce3aa03c90e525f8fa0eb80"
+    },
+    {
+        "path":  "src\\components.tsx",
+        "bytes":  16543,
+        "sha256":  "47a35d89f64abc70e8249bf9d0be887e0457f0f45a04e326a63891b56ce92432"
+    },
+    {
+        "path":  "src\\domain.test.ts",
+        "bytes":  10885,
+        "sha256":  "8d5f17111676394aa70373ac9b6112b97484a566fa27efac590181c0b2103c40"
+    },
+    {
+        "path":  "src\\domain.ts",
+        "bytes":  12018,
+        "sha256":  "965499aab53a9497b2d28a92f120b82681d7c801013223df8cf6d078c8a955f3"
+    },
+    {
+        "path":  "src\\engine.ts",
+        "bytes":  9312,
+        "sha256":  "2e33cbc3d1a6d33a899d5281e07a2bf272fac376008128a798a9d4d66989af47"
+    },
+    {
+        "path":  "src\\engine.worker.ts",
+        "bytes":  596,
+        "sha256":  "18cbb3f47daa4bb600b1d40f7c34120aa3947474ccde53a859bc7b5cb08ce6cf"
+    },
+    {
+        "path":  "src\\fixtures.ts",
+        "bytes":  7831,
+        "sha256":  "a4b8d5eb88162e37f1e57f74254ee796538c1a400304a9213c8a6898f9dd9b49"
+    },
+    {
+        "path":  "src\\Hecatron.elm.json",
+        "bytes":  89294,
+        "sha256":  "f33800816c7771993a083c50331f64441520d8edff6128daf3f59455305fb78c"
+    },
+    {
+        "path":  "src\\knowledge-manifest.json",
+        "bytes":  393,
+        "sha256":  "835d34b21791beef9ec06ac680716d5fe30bf2227ab50e6a1b7ba827b5a9afcd"
+    },
+    {
+        "path":  "src\\main.tsx",
+        "bytes":  1109,
+        "sha256":  "1b78c2db4da7e2b4ef2b1377d77d3d2ecce050b034959d4df3aa769fcc2d9e89"
+    },
+    {
+        "path":  "src\\native.ts",
+        "bytes":  4872,
+        "sha256":  "75db14b2317bb90fd03b198fd2adcca015a5a345746beba414bd49bc3337ae05"
+    },
+    {
+        "path":  "src\\storage.ts",
+        "bytes":  1794,
+        "sha256":  "f879da9a9375822ddfec1cc7638de411adc3d9d6a8cf916d8aa53a17f579874c"
+    },
+    {
+        "path":  "src\\styles.css",
+        "bytes":  34083,
+        "sha256":  "e10b87909283de79f21feecfe959172a9373283f4ae41db2a79bba126a301b3d"
+    },
+    {
+        "path":  "src\\theme.css",
+        "bytes":  10346,
+        "sha256":  "5a635b7c6c2ede3e3c6df111eac07abe291dea904c6630be33f834900492c93d"
+    },
+    {
+        "path":  "src\\views.tsx",
+        "bytes":  20050,
+        "sha256":  "5d874cb9b22bfb61c37d8dd41276bbf9d7a5cd26203c9ad2c8feb25c1b6f9982"
+    },
+    {
+        "path":  "src\\worker-client.ts",
+        "bytes":  1712,
+        "sha256":  "70a6d342648967bb99998440794e9b5c88f89daf441f40402258604fb04f355d"
+    },
+    {
+        "path":  "tsconfig.json",
+        "bytes":  729,
+        "sha256":  "3a00f7213e07a2bdea797f7d3f9081e91385d14c4d51d5d59080dc46b7b59273"
+    }
+]

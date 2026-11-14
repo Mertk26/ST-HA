@@ -1,0 +1,10 @@
+poc/node_modules/
+poc/dist/
+poc/test-results/
+poc/playwright-report/
+poc/.tools/
+node_modules/
+dist/
+test-results/
+playwright-report/
+.tools/

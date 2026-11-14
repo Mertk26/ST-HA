@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Hecatron POC</string>
+    <string name="title_activity_main">Hecatron POC</string>
+    <string name="package_name">org.hecatron.poc</string>
+    <string name="custom_url_scheme">org.hecatron.poc</string>
+</resources>

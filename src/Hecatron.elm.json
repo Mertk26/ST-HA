@@ -1,0 +1,2846 @@
+{
+  "library": {
+    "localId": "0",
+    "annotation": [
+      {
+        "type": "CqlToElmInfo",
+        "translatorVersion": "5.6.1",
+        "translatorOptions": "EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion",
+        "signatureLevel": "Overloads"
+      },
+      {
+        "type": "Annotation",
+        "t": [],
+        "s": {
+          "r": "394",
+          "s": [
+            {
+              "value": [
+                "",
+                "library Hecatron version '0.1.0'"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "identifier": {
+      "id": "Hecatron",
+      "version": "0.1.0"
+    },
+    "schemaIdentifier": {
+      "id": "urn:hl7-org:elm",
+      "version": "r1"
+    },
+    "usings": {
+      "def": [
+        {
+          "localId": "1",
+          "localIdentifier": "System",
+          "uri": "urn:hl7-org:elm-types:r1",
+          "annotation": []
+        }
+      ]
+    },
+    "parameters": {
+      "def": [
+        {
+          "localId": "206",
+          "locator": "3:1-3:33",
+          "name": "EvaluationTime",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "206",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "parameter ",
+                      "EvaluationTime",
+                      " "
+                    ]
+                  },
+                  {
+                    "r": "207",
+                    "s": [
+                      {
+                        "value": [
+                          "DateTime"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "parameterTypeSpecifier": {
+            "type": "NamedTypeSpecifier",
+            "localId": "207",
+            "locator": "3:26-3:33",
+            "name": "{urn:hl7-org:elm-types:r1}DateTime",
+            "annotation": []
+          }
+        },
+        {
+          "localId": "209",
+          "locator": "4:1-4:26",
+          "name": "SleepAt",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "209",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "parameter ",
+                      "SleepAt",
+                      " "
+                    ]
+                  },
+                  {
+                    "r": "210",
+                    "s": [
+                      {
+                        "value": [
+                          "DateTime"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "parameterTypeSpecifier": {
+            "type": "NamedTypeSpecifier",
+            "localId": "210",
+            "locator": "4:19-4:26",
+            "name": "{urn:hl7-org:elm-types:r1}DateTime",
+            "annotation": []
+          }
+        },
+        {
+          "localId": "212",
+          "locator": "5:1-5:32",
+          "name": "SleepDuration",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "212",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "parameter ",
+                      "SleepDuration",
+                      " "
+                    ]
+                  },
+                  {
+                    "r": "213",
+                    "s": [
+                      {
+                        "value": [
+                          "Quantity"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "parameterTypeSpecifier": {
+            "type": "NamedTypeSpecifier",
+            "localId": "213",
+            "locator": "5:25-5:32",
+            "name": "{urn:hl7-org:elm-types:r1}Quantity",
+            "annotation": []
+          }
+        },
+        {
+          "localId": "215",
+          "locator": "6:1-6:30",
+          "name": "SleepTarget",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "215",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "parameter ",
+                      "SleepTarget",
+                      " "
+                    ]
+                  },
+                  {
+                    "r": "216",
+                    "s": [
+                      {
+                        "value": [
+                          "Quantity"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "parameterTypeSpecifier": {
+            "type": "NamedTypeSpecifier",
+            "localId": "216",
+            "locator": "6:23-6:30",
+            "name": "{urn:hl7-org:elm-types:r1}Quantity",
+            "annotation": []
+          }
+        },
+        {
+          "localId": "218",
+          "locator": "7:1-7:25",
+          "name": "Fatigue",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "218",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "parameter ",
+                      "Fatigue",
+                      " "
+                    ]
+                  },
+                  {
+                    "r": "219",
+                    "s": [
+                      {
+                        "value": [
+                          "Boolean"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "parameterTypeSpecifier": {
+            "type": "NamedTypeSpecifier",
+            "localId": "219",
+            "locator": "7:19-7:25",
+            "name": "{urn:hl7-org:elm-types:r1}Boolean",
+            "annotation": []
+          }
+        },
+        {
+          "localId": "221",
+          "locator": "8:1-8:29",
+          "name": "StrengthAt",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "221",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "parameter ",
+                      "StrengthAt",
+                      " "
+                    ]
+                  },
+                  {
+                    "r": "222",
+                    "s": [
+                      {
+                        "value": [
+                          "DateTime"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "parameterTypeSpecifier": {
+            "type": "NamedTypeSpecifier",
+            "localId": "222",
+            "locator": "8:22-8:29",
+            "name": "{urn:hl7-org:elm-types:r1}DateTime",
+            "annotation": []
+          }
+        },
+        {
+          "localId": "224",
+          "locator": "9:1-9:33",
+          "name": "CurrentStrength",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "224",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "parameter ",
+                      "CurrentStrength",
+                      " "
+                    ]
+                  },
+                  {
+                    "r": "225",
+                    "s": [
+                      {
+                        "value": [
+                          "Decimal"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "parameterTypeSpecifier": {
+            "type": "NamedTypeSpecifier",
+            "localId": "225",
+            "locator": "9:27-9:33",
+            "name": "{urn:hl7-org:elm-types:r1}Decimal",
+            "annotation": []
+          }
+        },
+        {
+          "localId": "227",
+          "locator": "10:1-10:34",
+          "name": "BaselineStrength",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "227",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "parameter ",
+                      "BaselineStrength",
+                      " "
+                    ]
+                  },
+                  {
+                    "r": "228",
+                    "s": [
+                      {
+                        "value": [
+                          "Decimal"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "parameterTypeSpecifier": {
+            "type": "NamedTypeSpecifier",
+            "localId": "228",
+            "locator": "10:28-10:34",
+            "name": "{urn:hl7-org:elm-types:r1}Decimal",
+            "annotation": []
+          }
+        },
+        {
+          "localId": "230",
+          "locator": "11:1-11:39",
+          "name": "FluidCoverageComplete",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "230",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "parameter ",
+                      "FluidCoverageComplete",
+                      " "
+                    ]
+                  },
+                  {
+                    "r": "231",
+                    "s": [
+                      {
+                        "value": [
+                          "Boolean"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "parameterTypeSpecifier": {
+            "type": "NamedTypeSpecifier",
+            "localId": "231",
+            "locator": "11:33-11:39",
+            "name": "{urn:hl7-org:elm-types:r1}Boolean",
+            "annotation": []
+          }
+        },
+        {
+          "localId": "233",
+          "locator": "12:1-12:37",
+          "name": "AbdominalDiscomfort",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "233",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "parameter ",
+                      "AbdominalDiscomfort",
+                      " "
+                    ]
+                  },
+                  {
+                    "r": "234",
+                    "s": [
+                      {
+                        "value": [
+                          "Boolean"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "parameterTypeSpecifier": {
+            "type": "NamedTypeSpecifier",
+            "localId": "234",
+            "locator": "12:31-12:37",
+            "name": "{urn:hl7-org:elm-types:r1}Boolean",
+            "annotation": []
+          }
+        },
+        {
+          "localId": "236",
+          "locator": "13:1-13:25",
+          "name": "MoodLow",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "236",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "parameter ",
+                      "MoodLow",
+                      " "
+                    ]
+                  },
+                  {
+                    "r": "237",
+                    "s": [
+                      {
+                        "value": [
+                          "Boolean"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "parameterTypeSpecifier": {
+            "type": "NamedTypeSpecifier",
+            "localId": "237",
+            "locator": "13:19-13:25",
+            "name": "{urn:hl7-org:elm-types:r1}Boolean",
+            "annotation": []
+          }
+        },
+        {
+          "localId": "239",
+          "locator": "14:1-14:28",
+          "name": "CheckInAt",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "239",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "parameter ",
+                      "CheckInAt",
+                      " "
+                    ]
+                  },
+                  {
+                    "r": "240",
+                    "s": [
+                      {
+                        "value": [
+                          "DateTime"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "parameterTypeSpecifier": {
+            "type": "NamedTypeSpecifier",
+            "localId": "240",
+            "locator": "14:21-14:28",
+            "name": "{urn:hl7-org:elm-types:r1}DateTime",
+            "annotation": []
+          }
+        },
+        {
+          "localId": "242",
+          "locator": "15:1-15:26",
+          "name": "FluidAt",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "242",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "parameter ",
+                      "FluidAt",
+                      " "
+                    ]
+                  },
+                  {
+                    "r": "243",
+                    "s": [
+                      {
+                        "value": [
+                          "DateTime"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "parameterTypeSpecifier": {
+            "type": "NamedTypeSpecifier",
+            "localId": "243",
+            "locator": "15:19-15:26",
+            "name": "{urn:hl7-org:elm-types:r1}DateTime",
+            "annotation": []
+          }
+        },
+        {
+          "localId": "245",
+          "locator": "16:1-16:34",
+          "name": "AssessmentDueAt",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "245",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "parameter ",
+                      "AssessmentDueAt",
+                      " "
+                    ]
+                  },
+                  {
+                    "r": "246",
+                    "s": [
+                      {
+                        "value": [
+                          "DateTime"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "parameterTypeSpecifier": {
+            "type": "NamedTypeSpecifier",
+            "localId": "246",
+            "locator": "16:27-16:34",
+            "name": "{urn:hl7-org:elm-types:r1}DateTime",
+            "annotation": []
+          }
+        },
+        {
+          "localId": "248",
+          "locator": "17:1-17:35",
+          "name": "AssessmentPending",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "248",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "parameter ",
+                      "AssessmentPending",
+                      " "
+                    ]
+                  },
+                  {
+                    "r": "249",
+                    "s": [
+                      {
+                        "value": [
+                          "Boolean"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "parameterTypeSpecifier": {
+            "type": "NamedTypeSpecifier",
+            "localId": "249",
+            "locator": "17:29-17:35",
+            "name": "{urn:hl7-org:elm-types:r1}Boolean",
+            "annotation": []
+          }
+        }
+      ]
+    },
+    "contexts": {
+      "def": [
+        {
+          "localId": "251",
+          "locator": "19:1-19:18",
+          "name": "Unfiltered",
+          "annotation": []
+        }
+      ]
+    },
+    "statements": {
+      "def": [
+        {
+          "localId": "254",
+          "locator": "21:1-22:88",
+          "name": "SleepFresh",
+          "context": "Unfiltered",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "254",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "define ",
+                      "SleepFresh",
+                      ":\n  "
+                    ]
+                  },
+                  {
+                    "r": "255",
+                    "s": [
+                      {
+                        "r": "258",
+                        "s": [
+                          {
+                            "r": "256",
+                            "s": [
+                              {
+                                "value": [
+                                  "SleepAt"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "value": [
+                              " is not null"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "value": [
+                          " and "
+                        ]
+                      },
+                      {
+                        "r": "267",
+                        "s": [
+                          {
+                            "r": "259",
+                            "s": [
+                              {
+                                "value": [
+                                  "SleepAt"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "value": [
+                              " in "
+                            ]
+                          },
+                          {
+                            "r": "266",
+                            "s": [
+                              {
+                                "value": [
+                                  "Interval["
+                                ]
+                              },
+                              {
+                                "r": "260",
+                                "s": [
+                                  {
+                                    "r": "261",
+                                    "s": [
+                                      {
+                                        "value": [
+                                          "EvaluationTime"
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "value": [
+                                      " - "
+                                    ]
+                                  },
+                                  {
+                                    "r": "262",
+                                    "s": [
+                                      {
+                                        "value": [
+                                          "24 ",
+                                          "hours"
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "value": [
+                                  ", "
+                                ]
+                              },
+                              {
+                                "r": "265",
+                                "s": [
+                                  {
+                                    "value": [
+                                      "EvaluationTime"
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "value": [
+                                  "]"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "expression": {
+            "type": "And",
+            "localId": "255",
+            "locator": "22:3-22:88",
+            "annotation": [],
+            "signature": [],
+            "operand": [
+              {
+                "type": "Not",
+                "localId": "258",
+                "locator": "22:3-22:21",
+                "annotation": [],
+                "signature": [],
+                "operand": {
+                  "type": "IsNull",
+                  "localId": "257",
+                  "locator": "22:3-22:21",
+                  "annotation": [],
+                  "signature": [],
+                  "operand": {
+                    "type": "ParameterRef",
+                    "localId": "256",
+                    "locator": "22:3-22:9",
+                    "name": "SleepAt",
+                    "annotation": []
+                  }
+                }
+              },
+              {
+                "type": "In",
+                "localId": "267",
+                "locator": "22:27-22:88",
+                "annotation": [],
+                "signature": [],
+                "operand": [
+                  {
+                    "type": "ParameterRef",
+                    "localId": "259",
+                    "locator": "22:27-22:33",
+                    "name": "SleepAt",
+                    "annotation": []
+                  },
+                  {
+                    "type": "Interval",
+                    "localId": "266",
+                    "locator": "22:38-22:88",
+                    "lowClosed": true,
+                    "highClosed": true,
+                    "annotation": [],
+                    "low": {
+                      "type": "Subtract",
+                      "localId": "260",
+                      "locator": "22:47-22:71",
+                      "annotation": [],
+                      "signature": [
+                        {
+                          "type": "NamedTypeSpecifier",
+                          "localId": "263",
+                          "name": "{urn:hl7-org:elm-types:r1}DateTime",
+                          "annotation": []
+                        },
+                        {
+                          "type": "NamedTypeSpecifier",
+                          "localId": "264",
+                          "name": "{urn:hl7-org:elm-types:r1}Quantity",
+                          "annotation": []
+                        }
+                      ],
+                      "operand": [
+                        {
+                          "type": "ParameterRef",
+                          "localId": "261",
+                          "locator": "22:47-22:60",
+                          "name": "EvaluationTime",
+                          "annotation": []
+                        },
+                        {
+                          "type": "Quantity",
+                          "localId": "262",
+                          "locator": "22:64-22:71",
+                          "value": 24,
+                          "unit": "hours",
+                          "annotation": []
+                        }
+                      ]
+                    },
+                    "high": {
+                      "type": "ParameterRef",
+                      "localId": "265",
+                      "locator": "22:74-22:87",
+                      "name": "EvaluationTime",
+                      "annotation": []
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "localId": "270",
+          "locator": "23:1-24:69",
+          "name": "SleepBelowPlan",
+          "context": "Unfiltered",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "270",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "define ",
+                      "SleepBelowPlan",
+                      ":\n  "
+                    ]
+                  },
+                  {
+                    "r": "271",
+                    "s": [
+                      {
+                        "value": [
+                          "if "
+                        ]
+                      },
+                      {
+                        "r": "272",
+                        "s": [
+                          {
+                            "value": [
+                              "SleepFresh"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "value": [
+                          " then "
+                        ]
+                      },
+                      {
+                        "r": "273",
+                        "s": [
+                          {
+                            "r": "274",
+                            "s": [
+                              {
+                                "value": [
+                                  "SleepDuration"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "value": [
+                              " ",
+                              "<",
+                              " "
+                            ]
+                          },
+                          {
+                            "r": "275",
+                            "s": [
+                              {
+                                "value": [
+                                  "SleepTarget"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "value": [
+                          " else "
+                        ]
+                      },
+                      {
+                        "r": "278",
+                        "s": [
+                          {
+                            "r": "279",
+                            "value": [
+                              "null",
+                              " as "
+                            ]
+                          },
+                          {
+                            "r": "280",
+                            "s": [
+                              {
+                                "value": [
+                                  "Boolean"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "expression": {
+            "type": "If",
+            "localId": "271",
+            "locator": "24:3-24:69",
+            "annotation": [],
+            "condition": {
+              "type": "ExpressionRef",
+              "localId": "272",
+              "locator": "24:6-24:15",
+              "name": "SleepFresh",
+              "annotation": []
+            },
+            "then": {
+              "type": "Less",
+              "localId": "273",
+              "locator": "24:22-24:48",
+              "annotation": [],
+              "signature": [
+                {
+                  "type": "NamedTypeSpecifier",
+                  "localId": "276",
+                  "name": "{urn:hl7-org:elm-types:r1}Quantity",
+                  "annotation": []
+                },
+                {
+                  "type": "NamedTypeSpecifier",
+                  "localId": "277",
+                  "name": "{urn:hl7-org:elm-types:r1}Quantity",
+                  "annotation": []
+                }
+              ],
+              "operand": [
+                {
+                  "type": "ParameterRef",
+                  "localId": "274",
+                  "locator": "24:22-24:34",
+                  "name": "SleepDuration",
+                  "annotation": []
+                },
+                {
+                  "type": "ParameterRef",
+                  "localId": "275",
+                  "locator": "24:38-24:48",
+                  "name": "SleepTarget",
+                  "annotation": []
+                }
+              ]
+            },
+            "else": {
+              "type": "As",
+              "localId": "278",
+              "locator": "24:55-24:69",
+              "strict": false,
+              "annotation": [],
+              "signature": [],
+              "operand": {
+                "type": "Null",
+                "localId": "279",
+                "locator": "24:55-24:58",
+                "annotation": []
+              },
+              "asTypeSpecifier": {
+                "type": "NamedTypeSpecifier",
+                "localId": "280",
+                "locator": "24:63-24:69",
+                "name": "{urn:hl7-org:elm-types:r1}Boolean",
+                "annotation": []
+              }
+            }
+          }
+        },
+        {
+          "localId": "283",
+          "locator": "25:1-26:28",
+          "name": "SleepAndFatigue",
+          "context": "Unfiltered",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "283",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "define ",
+                      "SleepAndFatigue",
+                      ":\n  "
+                    ]
+                  },
+                  {
+                    "r": "284",
+                    "s": [
+                      {
+                        "r": "285",
+                        "s": [
+                          {
+                            "value": [
+                              "SleepBelowPlan"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "value": [
+                          " and "
+                        ]
+                      },
+                      {
+                        "r": "286",
+                        "s": [
+                          {
+                            "value": [
+                              "Fatigue"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "expression": {
+            "type": "And",
+            "localId": "284",
+            "locator": "26:3-26:28",
+            "annotation": [],
+            "signature": [],
+            "operand": [
+              {
+                "type": "ExpressionRef",
+                "localId": "285",
+                "locator": "26:3-26:16",
+                "name": "SleepBelowPlan",
+                "annotation": []
+              },
+              {
+                "type": "ParameterRef",
+                "localId": "286",
+                "locator": "26:22-26:28",
+                "name": "Fatigue",
+                "annotation": []
+              }
+            ]
+          }
+        },
+        {
+          "localId": "289",
+          "locator": "27:1-28:94",
+          "name": "StrengthFresh",
+          "context": "Unfiltered",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "289",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "define ",
+                      "StrengthFresh",
+                      ":\n  "
+                    ]
+                  },
+                  {
+                    "r": "290",
+                    "s": [
+                      {
+                        "r": "293",
+                        "s": [
+                          {
+                            "r": "291",
+                            "s": [
+                              {
+                                "value": [
+                                  "StrengthAt"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "value": [
+                              " is not null"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "value": [
+                          " and "
+                        ]
+                      },
+                      {
+                        "r": "302",
+                        "s": [
+                          {
+                            "r": "294",
+                            "s": [
+                              {
+                                "value": [
+                                  "StrengthAt"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "value": [
+                              " in "
+                            ]
+                          },
+                          {
+                            "r": "301",
+                            "s": [
+                              {
+                                "value": [
+                                  "Interval["
+                                ]
+                              },
+                              {
+                                "r": "295",
+                                "s": [
+                                  {
+                                    "r": "296",
+                                    "s": [
+                                      {
+                                        "value": [
+                                          "EvaluationTime"
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "value": [
+                                      " - "
+                                    ]
+                                  },
+                                  {
+                                    "r": "297",
+                                    "s": [
+                                      {
+                                        "value": [
+                                          "24 ",
+                                          "hours"
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "value": [
+                                  ", "
+                                ]
+                              },
+                              {
+                                "r": "300",
+                                "s": [
+                                  {
+                                    "value": [
+                                      "EvaluationTime"
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "value": [
+                                  "]"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "expression": {
+            "type": "And",
+            "localId": "290",
+            "locator": "28:3-28:94",
+            "annotation": [],
+            "signature": [],
+            "operand": [
+              {
+                "type": "Not",
+                "localId": "293",
+                "locator": "28:3-28:24",
+                "annotation": [],
+                "signature": [],
+                "operand": {
+                  "type": "IsNull",
+                  "localId": "292",
+                  "locator": "28:3-28:24",
+                  "annotation": [],
+                  "signature": [],
+                  "operand": {
+                    "type": "ParameterRef",
+                    "localId": "291",
+                    "locator": "28:3-28:12",
+                    "name": "StrengthAt",
+                    "annotation": []
+                  }
+                }
+              },
+              {
+                "type": "In",
+                "localId": "302",
+                "locator": "28:30-28:94",
+                "annotation": [],
+                "signature": [],
+                "operand": [
+                  {
+                    "type": "ParameterRef",
+                    "localId": "294",
+                    "locator": "28:30-28:39",
+                    "name": "StrengthAt",
+                    "annotation": []
+                  },
+                  {
+                    "type": "Interval",
+                    "localId": "301",
+                    "locator": "28:44-28:94",
+                    "lowClosed": true,
+                    "highClosed": true,
+                    "annotation": [],
+                    "low": {
+                      "type": "Subtract",
+                      "localId": "295",
+                      "locator": "28:53-28:77",
+                      "annotation": [],
+                      "signature": [
+                        {
+                          "type": "NamedTypeSpecifier",
+                          "localId": "298",
+                          "name": "{urn:hl7-org:elm-types:r1}DateTime",
+                          "annotation": []
+                        },
+                        {
+                          "type": "NamedTypeSpecifier",
+                          "localId": "299",
+                          "name": "{urn:hl7-org:elm-types:r1}Quantity",
+                          "annotation": []
+                        }
+                      ],
+                      "operand": [
+                        {
+                          "type": "ParameterRef",
+                          "localId": "296",
+                          "locator": "28:53-28:66",
+                          "name": "EvaluationTime",
+                          "annotation": []
+                        },
+                        {
+                          "type": "Quantity",
+                          "localId": "297",
+                          "locator": "28:70-28:77",
+                          "value": 24,
+                          "unit": "hours",
+                          "annotation": []
+                        }
+                      ]
+                    },
+                    "high": {
+                      "type": "ParameterRef",
+                      "localId": "300",
+                      "locator": "28:80-28:93",
+                      "name": "EvaluationTime",
+                      "annotation": []
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "localId": "305",
+          "locator": "29:1-30:106",
+          "name": "StrengthRatio",
+          "context": "Unfiltered",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "305",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "define ",
+                      "StrengthRatio",
+                      ":\n  "
+                    ]
+                  },
+                  {
+                    "r": "306",
+                    "s": [
+                      {
+                        "value": [
+                          "if "
+                        ]
+                      },
+                      {
+                        "r": "307",
+                        "s": [
+                          {
+                            "r": "308",
+                            "s": [
+                              {
+                                "value": [
+                                  "StrengthFresh"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "value": [
+                              " and "
+                            ]
+                          },
+                          {
+                            "r": "309",
+                            "s": [
+                              {
+                                "r": "310",
+                                "s": [
+                                  {
+                                    "value": [
+                                      "BaselineStrength"
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "r": "311",
+                                "value": [
+                                  " ",
+                                  ">",
+                                  " ",
+                                  "0.0"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "value": [
+                          " then "
+                        ]
+                      },
+                      {
+                        "r": "314",
+                        "s": [
+                          {
+                            "r": "315",
+                            "s": [
+                              {
+                                "value": [
+                                  "CurrentStrength"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "value": [
+                              " / "
+                            ]
+                          },
+                          {
+                            "r": "316",
+                            "s": [
+                              {
+                                "value": [
+                                  "BaselineStrength"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "value": [
+                          " else "
+                        ]
+                      },
+                      {
+                        "r": "319",
+                        "s": [
+                          {
+                            "r": "320",
+                            "value": [
+                              "null",
+                              " as "
+                            ]
+                          },
+                          {
+                            "r": "321",
+                            "s": [
+                              {
+                                "value": [
+                                  "Decimal"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "expression": {
+            "type": "If",
+            "localId": "306",
+            "locator": "30:3-30:106",
+            "annotation": [],
+            "condition": {
+              "type": "And",
+              "localId": "307",
+              "locator": "30:6-30:45",
+              "annotation": [],
+              "signature": [],
+              "operand": [
+                {
+                  "type": "ExpressionRef",
+                  "localId": "308",
+                  "locator": "30:6-30:18",
+                  "name": "StrengthFresh",
+                  "annotation": []
+                },
+                {
+                  "type": "Greater",
+                  "localId": "309",
+                  "locator": "30:24-30:45",
+                  "annotation": [],
+                  "signature": [
+                    {
+                      "type": "NamedTypeSpecifier",
+                      "localId": "312",
+                      "name": "{urn:hl7-org:elm-types:r1}Decimal",
+                      "annotation": []
+                    },
+                    {
+                      "type": "NamedTypeSpecifier",
+                      "localId": "313",
+                      "name": "{urn:hl7-org:elm-types:r1}Decimal",
+                      "annotation": []
+                    }
+                  ],
+                  "operand": [
+                    {
+                      "type": "ParameterRef",
+                      "localId": "310",
+                      "locator": "30:24-30:39",
+                      "name": "BaselineStrength",
+                      "annotation": []
+                    },
+                    {
+                      "type": "Literal",
+                      "localId": "311",
+                      "locator": "30:43-30:45",
+                      "valueType": "{urn:hl7-org:elm-types:r1}Decimal",
+                      "value": "0.0",
+                      "annotation": []
+                    }
+                  ]
+                }
+              ]
+            },
+            "then": {
+              "type": "Divide",
+              "localId": "314",
+              "locator": "30:52-30:85",
+              "annotation": [],
+              "signature": [
+                {
+                  "type": "NamedTypeSpecifier",
+                  "localId": "317",
+                  "name": "{urn:hl7-org:elm-types:r1}Decimal",
+                  "annotation": []
+                },
+                {
+                  "type": "NamedTypeSpecifier",
+                  "localId": "318",
+                  "name": "{urn:hl7-org:elm-types:r1}Decimal",
+                  "annotation": []
+                }
+              ],
+              "operand": [
+                {
+                  "type": "ParameterRef",
+                  "localId": "315",
+                  "locator": "30:52-30:66",
+                  "name": "CurrentStrength",
+                  "annotation": []
+                },
+                {
+                  "type": "ParameterRef",
+                  "localId": "316",
+                  "locator": "30:70-30:85",
+                  "name": "BaselineStrength",
+                  "annotation": []
+                }
+              ]
+            },
+            "else": {
+              "type": "As",
+              "localId": "319",
+              "locator": "30:92-30:106",
+              "strict": false,
+              "annotation": [],
+              "signature": [],
+              "operand": {
+                "type": "Null",
+                "localId": "320",
+                "locator": "30:92-30:95",
+                "annotation": []
+              },
+              "asTypeSpecifier": {
+                "type": "NamedTypeSpecifier",
+                "localId": "321",
+                "locator": "30:100-30:106",
+                "name": "{urn:hl7-org:elm-types:r1}Decimal",
+                "annotation": []
+              }
+            }
+          }
+        },
+        {
+          "localId": "324",
+          "locator": "31:1-32:76",
+          "name": "StrengthBelowReference",
+          "context": "Unfiltered",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "324",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "define ",
+                      "StrengthBelowReference",
+                      ":\n  "
+                    ]
+                  },
+                  {
+                    "r": "325",
+                    "s": [
+                      {
+                        "value": [
+                          "if "
+                        ]
+                      },
+                      {
+                        "r": "328",
+                        "s": [
+                          {
+                            "r": "326",
+                            "s": [
+                              {
+                                "value": [
+                                  "StrengthRatio"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "value": [
+                              " is not null"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "value": [
+                          " then "
+                        ]
+                      },
+                      {
+                        "r": "329",
+                        "s": [
+                          {
+                            "r": "330",
+                            "s": [
+                              {
+                                "value": [
+                                  "StrengthRatio"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "r": "331",
+                            "value": [
+                              " ",
+                              "<",
+                              " ",
+                              "0.8"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "value": [
+                          " else "
+                        ]
+                      },
+                      {
+                        "r": "334",
+                        "s": [
+                          {
+                            "r": "335",
+                            "value": [
+                              "null",
+                              " as "
+                            ]
+                          },
+                          {
+                            "r": "336",
+                            "s": [
+                              {
+                                "value": [
+                                  "Boolean"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "expression": {
+            "type": "If",
+            "localId": "325",
+            "locator": "32:3-32:76",
+            "annotation": [],
+            "condition": {
+              "type": "Not",
+              "localId": "328",
+              "locator": "32:6-32:30",
+              "annotation": [],
+              "signature": [],
+              "operand": {
+                "type": "IsNull",
+                "localId": "327",
+                "locator": "32:6-32:30",
+                "annotation": [],
+                "signature": [],
+                "operand": {
+                  "type": "ExpressionRef",
+                  "localId": "326",
+                  "locator": "32:6-32:18",
+                  "name": "StrengthRatio",
+                  "annotation": []
+                }
+              }
+            },
+            "then": {
+              "type": "Less",
+              "localId": "329",
+              "locator": "32:37-32:55",
+              "annotation": [],
+              "signature": [
+                {
+                  "type": "NamedTypeSpecifier",
+                  "localId": "332",
+                  "name": "{urn:hl7-org:elm-types:r1}Decimal",
+                  "annotation": []
+                },
+                {
+                  "type": "NamedTypeSpecifier",
+                  "localId": "333",
+                  "name": "{urn:hl7-org:elm-types:r1}Decimal",
+                  "annotation": []
+                }
+              ],
+              "operand": [
+                {
+                  "type": "ExpressionRef",
+                  "localId": "330",
+                  "locator": "32:37-32:49",
+                  "name": "StrengthRatio",
+                  "annotation": []
+                },
+                {
+                  "type": "Literal",
+                  "localId": "331",
+                  "locator": "32:53-32:55",
+                  "valueType": "{urn:hl7-org:elm-types:r1}Decimal",
+                  "value": "0.8",
+                  "annotation": []
+                }
+              ]
+            },
+            "else": {
+              "type": "As",
+              "localId": "334",
+              "locator": "32:62-32:76",
+              "strict": false,
+              "annotation": [],
+              "signature": [],
+              "operand": {
+                "type": "Null",
+                "localId": "335",
+                "locator": "32:62-32:65",
+                "annotation": []
+              },
+              "asTypeSpecifier": {
+                "type": "NamedTypeSpecifier",
+                "localId": "336",
+                "locator": "32:70-32:76",
+                "name": "{urn:hl7-org:elm-types:r1}Boolean",
+                "annotation": []
+              }
+            }
+          }
+        },
+        {
+          "localId": "339",
+          "locator": "33:1-35:101",
+          "name": "FluidLogIncomplete",
+          "context": "Unfiltered",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "339",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "define ",
+                      "FluidLogIncomplete",
+                      ":\n  "
+                    ]
+                  },
+                  {
+                    "r": "340",
+                    "s": [
+                      {
+                        "value": [
+                          "if "
+                        ]
+                      },
+                      {
+                        "r": "342",
+                        "s": [
+                          {
+                            "r": "341",
+                            "s": [
+                              {
+                                "value": [
+                                  "FluidAt"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "value": [
+                              " is null"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "r": "343",
+                        "value": [
+                          " then ",
+                          "true",
+                          "\n  else "
+                        ]
+                      },
+                      {
+                        "r": "344",
+                        "s": [
+                          {
+                            "value": [
+                              "not "
+                            ]
+                          },
+                          {
+                            "r": "345",
+                            "s": [
+                              {
+                                "value": [
+                                  "("
+                                ]
+                              },
+                              {
+                                "r": "345",
+                                "s": [
+                                  {
+                                    "r": "354",
+                                    "s": [
+                                      {
+                                        "r": "346",
+                                        "s": [
+                                          {
+                                            "value": [
+                                              "FluidAt"
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "value": [
+                                          " in "
+                                        ]
+                                      },
+                                      {
+                                        "r": "353",
+                                        "s": [
+                                          {
+                                            "value": [
+                                              "Interval["
+                                            ]
+                                          },
+                                          {
+                                            "r": "347",
+                                            "s": [
+                                              {
+                                                "r": "348",
+                                                "s": [
+                                                  {
+                                                    "value": [
+                                                      "EvaluationTime"
+                                                    ]
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "value": [
+                                                  " - "
+                                                ]
+                                              },
+                                              {
+                                                "r": "349",
+                                                "s": [
+                                                  {
+                                                    "value": [
+                                                      "24 ",
+                                                      "hours"
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "value": [
+                                              ", "
+                                            ]
+                                          },
+                                          {
+                                            "r": "352",
+                                            "s": [
+                                              {
+                                                "value": [
+                                                  "EvaluationTime"
+                                                ]
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "value": [
+                                              "]"
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "value": [
+                                      " and "
+                                    ]
+                                  },
+                                  {
+                                    "r": "355",
+                                    "s": [
+                                      {
+                                        "value": [
+                                          "FluidCoverageComplete"
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "value": [
+                                  ")"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "expression": {
+            "type": "If",
+            "localId": "340",
+            "locator": "34:3-35:101",
+            "annotation": [],
+            "condition": {
+              "type": "IsNull",
+              "localId": "342",
+              "locator": "34:6-34:20",
+              "annotation": [],
+              "signature": [],
+              "operand": {
+                "type": "ParameterRef",
+                "localId": "341",
+                "locator": "34:6-34:12",
+                "name": "FluidAt",
+                "annotation": []
+              }
+            },
+            "then": {
+              "type": "Literal",
+              "localId": "343",
+              "locator": "34:27-34:30",
+              "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
+              "value": "true",
+              "annotation": []
+            },
+            "else": {
+              "type": "Not",
+              "localId": "344",
+              "locator": "35:8-35:101",
+              "annotation": [],
+              "signature": [],
+              "operand": {
+                "type": "And",
+                "localId": "345",
+                "locator": "35:12-35:101",
+                "annotation": [],
+                "signature": [],
+                "operand": [
+                  {
+                    "type": "In",
+                    "localId": "354",
+                    "locator": "35:13-35:74",
+                    "annotation": [],
+                    "signature": [],
+                    "operand": [
+                      {
+                        "type": "ParameterRef",
+                        "localId": "346",
+                        "locator": "35:13-35:19",
+                        "name": "FluidAt",
+                        "annotation": []
+                      },
+                      {
+                        "type": "Interval",
+                        "localId": "353",
+                        "locator": "35:24-35:74",
+                        "lowClosed": true,
+                        "highClosed": true,
+                        "annotation": [],
+                        "low": {
+                          "type": "Subtract",
+                          "localId": "347",
+                          "locator": "35:33-35:57",
+                          "annotation": [],
+                          "signature": [
+                            {
+                              "type": "NamedTypeSpecifier",
+                              "localId": "350",
+                              "name": "{urn:hl7-org:elm-types:r1}DateTime",
+                              "annotation": []
+                            },
+                            {
+                              "type": "NamedTypeSpecifier",
+                              "localId": "351",
+                              "name": "{urn:hl7-org:elm-types:r1}Quantity",
+                              "annotation": []
+                            }
+                          ],
+                          "operand": [
+                            {
+                              "type": "ParameterRef",
+                              "localId": "348",
+                              "locator": "35:33-35:46",
+                              "name": "EvaluationTime",
+                              "annotation": []
+                            },
+                            {
+                              "type": "Quantity",
+                              "localId": "349",
+                              "locator": "35:50-35:57",
+                              "value": 24,
+                              "unit": "hours",
+                              "annotation": []
+                            }
+                          ]
+                        },
+                        "high": {
+                          "type": "ParameterRef",
+                          "localId": "352",
+                          "locator": "35:60-35:73",
+                          "name": "EvaluationTime",
+                          "annotation": []
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ParameterRef",
+                    "localId": "355",
+                    "locator": "35:80-35:100",
+                    "name": "FluidCoverageComplete",
+                    "annotation": []
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "localId": "358",
+          "locator": "36:1-37:92",
+          "name": "CheckInFresh",
+          "context": "Unfiltered",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "358",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "define ",
+                      "CheckInFresh",
+                      ":\n  "
+                    ]
+                  },
+                  {
+                    "r": "359",
+                    "s": [
+                      {
+                        "r": "362",
+                        "s": [
+                          {
+                            "r": "360",
+                            "s": [
+                              {
+                                "value": [
+                                  "CheckInAt"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "value": [
+                              " is not null"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "value": [
+                          " and "
+                        ]
+                      },
+                      {
+                        "r": "371",
+                        "s": [
+                          {
+                            "r": "363",
+                            "s": [
+                              {
+                                "value": [
+                                  "CheckInAt"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "value": [
+                              " in "
+                            ]
+                          },
+                          {
+                            "r": "370",
+                            "s": [
+                              {
+                                "value": [
+                                  "Interval["
+                                ]
+                              },
+                              {
+                                "r": "364",
+                                "s": [
+                                  {
+                                    "r": "365",
+                                    "s": [
+                                      {
+                                        "value": [
+                                          "EvaluationTime"
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "value": [
+                                      " - "
+                                    ]
+                                  },
+                                  {
+                                    "r": "366",
+                                    "s": [
+                                      {
+                                        "value": [
+                                          "24 ",
+                                          "hours"
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "value": [
+                                  ", "
+                                ]
+                              },
+                              {
+                                "r": "369",
+                                "s": [
+                                  {
+                                    "value": [
+                                      "EvaluationTime"
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "value": [
+                                  "]"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "expression": {
+            "type": "And",
+            "localId": "359",
+            "locator": "37:3-37:92",
+            "annotation": [],
+            "signature": [],
+            "operand": [
+              {
+                "type": "Not",
+                "localId": "362",
+                "locator": "37:3-37:23",
+                "annotation": [],
+                "signature": [],
+                "operand": {
+                  "type": "IsNull",
+                  "localId": "361",
+                  "locator": "37:3-37:23",
+                  "annotation": [],
+                  "signature": [],
+                  "operand": {
+                    "type": "ParameterRef",
+                    "localId": "360",
+                    "locator": "37:3-37:11",
+                    "name": "CheckInAt",
+                    "annotation": []
+                  }
+                }
+              },
+              {
+                "type": "In",
+                "localId": "371",
+                "locator": "37:29-37:92",
+                "annotation": [],
+                "signature": [],
+                "operand": [
+                  {
+                    "type": "ParameterRef",
+                    "localId": "363",
+                    "locator": "37:29-37:37",
+                    "name": "CheckInAt",
+                    "annotation": []
+                  },
+                  {
+                    "type": "Interval",
+                    "localId": "370",
+                    "locator": "37:42-37:92",
+                    "lowClosed": true,
+                    "highClosed": true,
+                    "annotation": [],
+                    "low": {
+                      "type": "Subtract",
+                      "localId": "364",
+                      "locator": "37:51-37:75",
+                      "annotation": [],
+                      "signature": [
+                        {
+                          "type": "NamedTypeSpecifier",
+                          "localId": "367",
+                          "name": "{urn:hl7-org:elm-types:r1}DateTime",
+                          "annotation": []
+                        },
+                        {
+                          "type": "NamedTypeSpecifier",
+                          "localId": "368",
+                          "name": "{urn:hl7-org:elm-types:r1}Quantity",
+                          "annotation": []
+                        }
+                      ],
+                      "operand": [
+                        {
+                          "type": "ParameterRef",
+                          "localId": "365",
+                          "locator": "37:51-37:64",
+                          "name": "EvaluationTime",
+                          "annotation": []
+                        },
+                        {
+                          "type": "Quantity",
+                          "localId": "366",
+                          "locator": "37:68-37:75",
+                          "value": 24,
+                          "unit": "hours",
+                          "annotation": []
+                        }
+                      ]
+                    },
+                    "high": {
+                      "type": "ParameterRef",
+                      "localId": "369",
+                      "locator": "37:78-37:91",
+                      "name": "EvaluationTime",
+                      "annotation": []
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "localId": "374",
+          "locator": "38:1-39:63",
+          "name": "AbdominalReport",
+          "context": "Unfiltered",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "374",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "define ",
+                      "AbdominalReport",
+                      ":\n  "
+                    ]
+                  },
+                  {
+                    "r": "375",
+                    "s": [
+                      {
+                        "value": [
+                          "if "
+                        ]
+                      },
+                      {
+                        "r": "376",
+                        "s": [
+                          {
+                            "value": [
+                              "CheckInFresh"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "value": [
+                          " then "
+                        ]
+                      },
+                      {
+                        "r": "377",
+                        "s": [
+                          {
+                            "value": [
+                              "AbdominalDiscomfort"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "value": [
+                          " else "
+                        ]
+                      },
+                      {
+                        "r": "378",
+                        "s": [
+                          {
+                            "r": "379",
+                            "value": [
+                              "null",
+                              " as "
+                            ]
+                          },
+                          {
+                            "r": "380",
+                            "s": [
+                              {
+                                "value": [
+                                  "Boolean"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "expression": {
+            "type": "If",
+            "localId": "375",
+            "locator": "39:3-39:63",
+            "annotation": [],
+            "condition": {
+              "type": "ExpressionRef",
+              "localId": "376",
+              "locator": "39:6-39:17",
+              "name": "CheckInFresh",
+              "annotation": []
+            },
+            "then": {
+              "type": "ParameterRef",
+              "localId": "377",
+              "locator": "39:24-39:42",
+              "name": "AbdominalDiscomfort",
+              "annotation": []
+            },
+            "else": {
+              "type": "As",
+              "localId": "378",
+              "locator": "39:49-39:63",
+              "strict": false,
+              "annotation": [],
+              "signature": [],
+              "operand": {
+                "type": "Null",
+                "localId": "379",
+                "locator": "39:49-39:52",
+                "annotation": []
+              },
+              "asTypeSpecifier": {
+                "type": "NamedTypeSpecifier",
+                "localId": "380",
+                "locator": "39:57-39:63",
+                "name": "{urn:hl7-org:elm-types:r1}Boolean",
+                "annotation": []
+              }
+            }
+          }
+        },
+        {
+          "localId": "383",
+          "locator": "40:1-41:75",
+          "name": "CombinedPrivateContext",
+          "context": "Unfiltered",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "383",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "define ",
+                      "CombinedPrivateContext",
+                      ":\n  "
+                    ]
+                  },
+                  {
+                    "r": "384",
+                    "s": [
+                      {
+                        "value": [
+                          "if "
+                        ]
+                      },
+                      {
+                        "r": "385",
+                        "s": [
+                          {
+                            "value": [
+                              "CheckInFresh"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "value": [
+                          " then "
+                        ]
+                      },
+                      {
+                        "r": "386",
+                        "s": [
+                          {
+                            "r": "387",
+                            "s": [
+                              {
+                                "value": [
+                                  "MoodLow"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "value": [
+                              " and "
+                            ]
+                          },
+                          {
+                            "r": "388",
+                            "s": [
+                              {
+                                "value": [
+                                  "AbdominalDiscomfort"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "value": [
+                          " else "
+                        ]
+                      },
+                      {
+                        "r": "389",
+                        "s": [
+                          {
+                            "r": "390",
+                            "value": [
+                              "null",
+                              " as "
+                            ]
+                          },
+                          {
+                            "r": "391",
+                            "s": [
+                              {
+                                "value": [
+                                  "Boolean"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "expression": {
+            "type": "If",
+            "localId": "384",
+            "locator": "41:3-41:75",
+            "annotation": [],
+            "condition": {
+              "type": "ExpressionRef",
+              "localId": "385",
+              "locator": "41:6-41:17",
+              "name": "CheckInFresh",
+              "annotation": []
+            },
+            "then": {
+              "type": "And",
+              "localId": "386",
+              "locator": "41:24-41:54",
+              "annotation": [],
+              "signature": [],
+              "operand": [
+                {
+                  "type": "ParameterRef",
+                  "localId": "387",
+                  "locator": "41:24-41:30",
+                  "name": "MoodLow",
+                  "annotation": []
+                },
+                {
+                  "type": "ParameterRef",
+                  "localId": "388",
+                  "locator": "41:36-41:54",
+                  "name": "AbdominalDiscomfort",
+                  "annotation": []
+                }
+              ]
+            },
+            "else": {
+              "type": "As",
+              "localId": "389",
+              "locator": "41:61-41:75",
+              "strict": false,
+              "annotation": [],
+              "signature": [],
+              "operand": {
+                "type": "Null",
+                "localId": "390",
+                "locator": "41:61-41:64",
+                "annotation": []
+              },
+              "asTypeSpecifier": {
+                "type": "NamedTypeSpecifier",
+                "localId": "391",
+                "locator": "41:69-41:75",
+                "name": "{urn:hl7-org:elm-types:r1}Boolean",
+                "annotation": []
+              }
+            }
+          }
+        },
+        {
+          "localId": "394",
+          "locator": "42:1-43:57",
+          "name": "AssessmentDue",
+          "context": "Unfiltered",
+          "accessLevel": "Public",
+          "annotation": [
+            {
+              "type": "Annotation",
+              "t": [],
+              "s": {
+                "r": "394",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "define ",
+                      "AssessmentDue",
+                      ":\n  "
+                    ]
+                  },
+                  {
+                    "r": "395",
+                    "s": [
+                      {
+                        "r": "396",
+                        "s": [
+                          {
+                            "r": "397",
+                            "s": [
+                              {
+                                "value": [
+                                  "AssessmentDueAt"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "value": [
+                              " ",
+                              "<=",
+                              " "
+                            ]
+                          },
+                          {
+                            "r": "398",
+                            "s": [
+                              {
+                                "value": [
+                                  "EvaluationTime"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "value": [
+                          " and "
+                        ]
+                      },
+                      {
+                        "r": "401",
+                        "s": [
+                          {
+                            "value": [
+                              "AssessmentPending"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "expression": {
+            "type": "And",
+            "localId": "395",
+            "locator": "43:3-43:57",
+            "annotation": [],
+            "signature": [],
+            "operand": [
+              {
+                "type": "LessOrEqual",
+                "localId": "396",
+                "locator": "43:3-43:35",
+                "annotation": [],
+                "signature": [
+                  {
+                    "type": "NamedTypeSpecifier",
+                    "localId": "399",
+                    "name": "{urn:hl7-org:elm-types:r1}DateTime",
+                    "annotation": []
+                  },
+                  {
+                    "type": "NamedTypeSpecifier",
+                    "localId": "400",
+                    "name": "{urn:hl7-org:elm-types:r1}DateTime",
+                    "annotation": []
+                  }
+                ],
+                "operand": [
+                  {
+                    "type": "ParameterRef",
+                    "localId": "397",
+                    "locator": "43:3-43:17",
+                    "name": "AssessmentDueAt",
+                    "annotation": []
+                  },
+                  {
+                    "type": "ParameterRef",
+                    "localId": "398",
+                    "locator": "43:22-43:35",
+                    "name": "EvaluationTime",
+                    "annotation": []
+                  }
+                ]
+              },
+              {
+                "type": "ParameterRef",
+                "localId": "401",
+                "locator": "43:41-43:57",
+                "name": "AssessmentPending",
+                "annotation": []
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

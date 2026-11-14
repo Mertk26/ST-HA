@@ -1,0 +1,8 @@
+{
+  "appId": "org.hecatron.demo",
+  "appName": "Space Tiger Health Assistant",
+  "webDir": "dist",
+  "plugins": {
+    "LocalNotifications": { "smallIcon": "ic_stat_hecatron", "iconColor": "#84b5ff" }
+  }
+}
