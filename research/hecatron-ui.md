@@ -22,7 +22,7 @@ Health dashboard
 Inspect a body region, finding, measurement, or next step
 ```
 
-The experience must make the transition from information collection to explanation visible. It must not present staged sensor calls or a local identity simulation as a connection to real spacecraft systems. All public-demo data, including manual entries and individual plans, is synthetic; a standard dashboard session is separate from isolated scenario replay.
+The experience must make the transition from information collection to explanation visible. It must not present staged sensor calls or a local identity simulation as a connection to real spacecraft systems. All public-demo data, including manual entries and individual plans, is synthetic; Scenario Lab evaluates proposed readings separately from saved records.
 
 ## 2. Demo sign-in
 
@@ -99,10 +99,9 @@ At narrow widths, preserve the relationship using a stacked layout or a body/ove
 
 ### 6.1. Figure and identity
 
-- Use a Da Vinci-inspired human figure with male and female presentation variants.
-- Treat the figure variant as a presentation preference; do not infer anatomy, sex-related clinical parameters, or medical history from it.
-- Retain equivalent finding navigation and accessibility in either presentation.
-- Use original, appropriately licensed, or verified public-domain artwork; the style reference is not permission to reuse a modern derivative image.
+- Use a Da Vinci-inspired human figure, initially selected for each profile, without in-dashboard presentation controls.
+- Do not infer anatomy, sex-related clinical parameters, or medical history from the illustration.
+- Keep finding navigation accessible and use original or appropriately licensed artwork.
 
 ### 6.2. What a marker means
 
@@ -169,7 +168,7 @@ Browser timers are not reliable closed-app or background scheduling guarantees. 
 The implemented journey must demonstrate:
 
 - Fictional sign-in, source-labeled collection, manual input, analysis, and dashboard transition.
-- Male/female figure presentation without changing clinical interpretation.
+- Profile-based body illustrations without changing clinical interpretation.
 - Bidirectional selection between findings and body associations, plus an accessible list.
 - A finding with no anatomical mapping and a region with multiple findings.
 - Partial retrieval, declined optional input, insufficient data, and engine failure as distinct states.

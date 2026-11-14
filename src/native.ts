@@ -4,8 +4,8 @@ import type { Task, Workspace } from './domain.ts';
 
 export const isAndroid = Capacitor.getPlatform() === 'android';
 const channelId = 'hecatron-routines';
-const title = 'ST-HA demo reminder';
-const body = 'A synthetic health task is due. Open ST-HA for details.';
+const title = 'ST-HA reminder';
+const body = 'Example reminder. Open ST-HA for details.';
 const testId = 2_000_000_001;
 
 function taskNotificationId(workspace: Workspace, task: Task) {
@@ -15,7 +15,7 @@ export function plannedReminders(workspace: Workspace, now: number): LocalNotifi
   if (!workspace.nativeReminders || workspace.mode !== 'standard') return [];
   return workspace.tasks.filter(task => task.status === 'pending' && Date.parse(task.dueAt) > now).map(task => ({
     id: taskNotificationId(workspace, task), title,
-    body: `Synthetic task due ${task.dueAt.slice(11, 16)} UTC. Open ST-HA for details.`,
+    body: `Example task due ${task.dueAt.slice(11, 16)} UTC. Open ST-HA for details.`,
     channelId, isExactNotification: false, schedule: { at: new Date(task.dueAt) },
     extra: { workspaceId: workspace.id, taskId: task.id },
   }));
@@ -34,7 +34,7 @@ async function permission() {
   let state = await LocalNotifications.checkPermissions();
   if (state.display === 'prompt' || state.display === 'prompt-with-rationale') state = await LocalNotifications.requestPermissions();
   if (state.display !== 'granted') throw new Error('Android notification permission is denied. Review the app notification settings before retrying.');
-  await LocalNotifications.createChannel({ id: channelId, name: 'Fictional health routines', importance: 3, visibility: 0 });
+  await LocalNotifications.createChannel({ id: channelId, name: 'Health routines', importance: 3, visibility: 0 });
 }
 export async function syncNativeReminders(workspace: Workspace) {
   if (!isAndroid) return;
@@ -61,7 +61,7 @@ export async function testWatchReminder(workspace: Workspace) {
     schedule: { at: new Date(Date.now() + 10_000) },
     extra: { workspaceId: workspace.id, taskId: null },
   }] });
-  if (result.notifications[0]?.id !== testId) throw new Error('Android did not confirm scheduling the test reminder.');
+  if (result.notifications[0]?.id !== testId) throw new Error('Android did not confirm scheduling the reminder.');
 }
 export function listenToNativeActions(onTask: (scope: string) => void, onError: (message: string) => void) {
   if (!isAndroid) return () => {};

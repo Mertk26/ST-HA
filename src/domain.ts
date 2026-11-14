@@ -1,6 +1,7 @@
 import { z } from 'zod';
+import { catalogById, catalogInputs, type CatalogIndicator } from './input-catalog.ts';
 
-export const indicatorIds = ['heartRate', 'strength', 'sleep', 'fluid', 'fatigue', 'mood', 'bowel'] as const;
+export const indicatorIds = ['heartRate', 'strength', 'sleep', 'fluid', 'fatigue', 'mood', 'bowel', ...catalogInputs.map(item => item.id)] as const;
 export type Indicator = typeof indicatorIds[number];
 export const regionSchema = z.enum(['whole', 'arms', 'abdomen']);
 export type Region = z.infer<typeof regionSchema>;
@@ -33,6 +34,11 @@ export const observationSchema = z.object({
     }
     if (item.indicator === 'sleep' && typeof item.value === 'number' && item.value > 24) {
       ctx.addIssue({ code: 'custom', message: 'A daily sleep duration cannot exceed 24 hours.' });
+    }
+  } else if (catalogById.has(item.indicator)) {
+    const definition = catalogById.get(item.indicator)!;
+    if (item.unit !== definition.unit || (definition.kind === 'number' ? typeof item.value !== 'number' : typeof item.value !== 'string' || !item.value.trim())) {
+      ctx.addIssue({ code: 'custom', message: `Invalid value/unit for ${definition.label}.` });
     }
   } else if (item.indicator === 'fatigue') {
     if (typeof item.value !== 'boolean') ctx.addIssue({ code: 'custom', message: 'Fatigue must be a Boolean.' });
@@ -136,25 +142,26 @@ export const indicators: Record<Indicator, { label: string; unit: string }> = {
   fatigue: { label: 'Perceived fatigue', unit: '' },
   mood: { label: 'Private mood check-in', unit: '' },
   bowel: { label: 'Private digestive check-in', unit: '' },
+  ...Object.fromEntries(catalogInputs.map(item => [item.id, { label: item.label, unit: item.unit }])) as Record<CatalogIndicator, { label: string; unit: string }>,
 };
 
 export const evidence = [
   {
     id: 'nasa-strength', label: 'Maintaining physical performance', source: 'NASA-STD-3001 Vol. 1 Rev. C · V1 4024',
     url: 'https://www.nasa.gov/reference/4-0-human-performance/',
-    summary: 'NASA requires maintaining in-mission skeletal muscle strength at or above 80% of baseline. This demo compares one synthetic, like-for-like handgrip assessment.',
+    summary: 'NASA requires maintaining in-mission skeletal muscle strength at or above 80% of baseline. This comparison uses one like-for-like handgrip assessment against a fixed reference baseline.',
     limits: 'One handgrip assessment cannot establish whole-body muscle health, prescribe exercise, or determine fitness for duty.',
   },
   {
-    id: 'sleep-plan', label: 'Sleep, fatigue & mission schedules', source: 'NASA medical operations + fictional personal plan',
+    id: 'sleep-plan', label: 'Sleep, fatigue & mission schedules', source: 'NASA medical operations + ST-HA reference plan',
     url: 'https://www.nasa.gov/reference/6-0-medical-operations/',
-    summary: 'NASA discusses protected sleep opportunity and avoiding critical tasks during sleep periods. Here, reported sleep is compared with a fictional 8-hour personal target.',
-    limits: 'An 8-hour target and 24-hour freshness window are demo policies, not NASA diagnostic cutoffs. Sleep opportunity differs from measured sleep.',
+    summary: 'NASA discusses protected sleep opportunity and avoiding critical tasks during sleep periods. Here, recorded sleep is compared with a fixed 8-hour reference target.',
+    limits: 'The 8-hour reference target and 24-hour freshness window are not NASA diagnostic cutoffs. Sleep opportunity differs from measured sleep.',
   },
   {
-    id: 'daily-plan', label: 'Daily routines & complete records', source: 'ST-HA synthetic plan v1',
+    id: 'daily-plan', label: 'Daily routines & complete records', source: 'ST-HA plan v1',
     url: null,
-    summary: 'Fictional tasks and record-coverage checks illustrate plan support. Completion, acknowledgement, and health outcomes are independent.',
+    summary: 'Tasks and record-coverage checks support the reference plan. Completion, acknowledgement, and health outcomes are independent.',
     limits: 'No prescription, treatment selection, or missed-dose instructions are generated.',
   },
   {
@@ -162,6 +169,12 @@ export const evidence = [
     url: 'https://www.nasa.gov/hrp/risks/',
     summary: 'Spaceflight affects interacting physiological and behavioral systems. Timelines can help a person review co-occurring self-reports.',
     limits: 'Co-occurrence is not causation. Mood plus bowel changes does not diagnose a deficiency or justify starting supplements.',
+  },
+  {
+    id: 'demo-ranges', label: 'Demonstration input ranges', source: 'ST-HA fictional reference ranges',
+    url: null,
+    summary: 'The application compares selected current numeric inputs with example ranges for demonstration.',
+    limits: 'These estimates are not validated clinical, individual, environmental, or vehicle safety limits. A comparison is not a diagnosis or operational instruction.',
   },
 ] as const;
 
@@ -222,7 +235,7 @@ export function updateTask(workspace: Workspace, id: string, status: Task['statu
 }
 
 export function exportReport(workspace: Workspace, includePrivate: boolean) {
-  const privateIndicators = new Set<Indicator>(['mood', 'bowel']);
+  const privateIndicators = new Set<Indicator>(['mood', 'bowel', ...catalogInputs.map(item => item.id)]);
   const findings = workspace.evaluation?.findings.filter(item => includePrivate || !item.private) ?? [];
   return {
     schemaVersion: 1, product: 'Space Tiger Health Assistant (ST-HA) synthetic demonstration', mode: workspace.mode,

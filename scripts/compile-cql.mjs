@@ -1,9 +1,15 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
-import { compileCql } from '../poc/scripts/compile-cql.mjs';
+import { CqlTranslator, LibraryManager, ModelManager, createModelInfoProvider, stringAsSource } from '@cqframework/cql/cql-to-elm';
 
 const source = await readFile(new URL('../knowledge/Hecatron.cql', import.meta.url), 'utf8');
-const elm = await compileCql(source);
+const model = await readFile(new URL('../knowledge/system-modelinfo.xml', import.meta.url), 'utf8');
+const models = new ModelManager();
+models.modelInfoLoader.registerModelInfoProvider(createModelInfoProvider(name => name === 'System' ? stringAsSource(model) : null));
+const translator = CqlTranslator.fromText(source, new LibraryManager(models));
+const diagnostics = translator.exceptions.asJsArrayView();
+if (diagnostics.length) throw new Error(`CQL compilation diagnostics:\n${diagnostics.map(item => item.message).join('\n')}`);
+const elm = JSON.parse(translator.toJson());
 const output = `${JSON.stringify(elm, null, 2)}\n`;
 await writeFile(new URL('../src/Hecatron.elm.json', import.meta.url), output);
 await writeFile(new URL('../src/knowledge-manifest.json', import.meta.url), `${JSON.stringify({

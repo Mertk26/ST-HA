@@ -14,23 +14,33 @@ npm run compile:cql
 npm run dev
 ```
 
-Open the address printed by Vite. Choose **Alex Morgan**, enter the workspace, select **Sync simulated sensors**, then **Save & analyse**. No real credentials or hardware are required. The dashboard presents an original Da Vinci-inspired body navigator alongside measurements, explained findings, history, and fictional tasks.
+Open the address printed by Vite. Choose **Alex Morgan**, enter the workspace, select **Load readings**, then **Save & analyse**. No real credentials or hardware are required. The dashboard presents an original Da Vinci-inspired body navigator alongside measurements, explained findings, history, and fictional tasks.
 
 ## Included in this release
 
 - Fictional persona selection with separate local records; no actual IDP or authorization.
 - Simulated pulse/handgrip retrieval and manual sleep, intake, fatigue, mood, and digestive check-ins.
+- Saving a daily check-in automatically adds the supplemental synthetic readings and reanalyses the saved data. Numeric indicators without earlier history receive seven dated synthetic historical readings, without duplicating history on subsequent check-ins. Entered check-in values and retrieved sensor readings are preserved; existing records remain in the timeline. Replay values remain fixed.
+- Additional grouped personal, mission, and knowledge inputs can be entered in the observation timeline and explored in Scenario Lab. Some broad catalog areas are represented as free-text context rather than structured measurements or file imports.
 - Locally compiled CQL/ELM, executed in a cancellable Web Worker with a five-second limit. No remote inference or custom-rule fallback.
-- Male/female figure presentation, mapped findings, whole-person context, source-linked explanations, and historical trends with a table alternative.
+- CQL compares supported numeric inputs with illustrative example ranges and summarizes input availability. These ranges are estimates for fictional demonstrations, not medical or vehicle safety limits; free-text context is not clinically interpreted.
+- Fresh current catalog readings outside example ranges are grouped into explainable physiology, wellbeing, and mission findings. Sleep and stress co-occurrence does not establish causation.
+- Profile-based body illustrations, mapped findings, whole-person context, source-linked explanations, and historical trends with a table alternative.
+- The body navigator lists current inference findings dynamically, with review findings first and no fixed item count. Each opens its explanation; body markers still filter by region. The insights panel also shows all matching findings without a three-item cap.
+- The patterns widget supports every numeric indicator via a selector, with indicator-specific units, automatic vertical scaling, applicable reference lines, and a matching data table. It shows the latest seven recorded, non-superseded observations; missing values are not plotted.
+- On the overview, health routines sit below the body navigator in the left column; the chart spans the right column. Both columns stack on phones.
 - Observation correction lineage, separate finding/task/notice lifecycles, and privacy-filtered JSON export with a preview.
 - IndexedDB persistence with revision checks that reject cross-tab overwrites.
 - Visible-session refresh every 60 seconds, paused during check-in. With sensor refresh disabled, records are still reassessed as time passes.
-- Isolated scenario workspaces: demanding day, recovery, source outage, and engine failure. Replay has its own clock and cannot change standard history.
+- Scenario Lab starts from the current observations and evaluates adjustable next readings automatically in an in-memory dashboard preview. It does not change saved history or schedule reminders. Legacy replay workspaces remain supported.
 - Responsive layouts, keyboard-operable region markers, native dialogs, reduced-motion support, and mobile navigation.
-- A dark-blue space theme, with the supplied Space Tigers team logo in **About & credits**, accessible from sign-in and the workspace navigation.
+- A dark-blue space theme, with the supplied Space Tigers team logo and evidence library in **About & credits**, accessible from sign-in and the workspace navigation.
+- A responsive system overview in sign-in and About, with a separate [presentation diagram](./public/st-ha-how-it-works.svg). Both show the wider input landscape.
+- The sign-in screen links to `/app-debug.apk`. Place the Android debug package in `public\app-debug.apk` before deploying to make that download available.
+- A streamlined daily check-in without demonstration or disconnected-device banners. Observation records retain source metadata; About & credits explains the fictional profiles, example data, and lack of authentication or sensor integration.
 - Generated Capacitor Android project and ordinary, inexact native reminder integration. Future pending tasks use stable persona-scoped IDs and generic UTC previews; no health values appear in those previews.
 
-The broad research input/output catalogs are not a claim that every measurement or clinical pathway is implemented.
+The broad research input/output catalogs are not a claim that every detailed measurement, input method, or clinical pathway is implemented.
 
 ## Knowledge and data boundaries
 
@@ -40,11 +50,13 @@ The [CQL library](./knowledge/Hecatron.cql) uses a parameter-only System model. 
 |---|---|
 | Sleep below a fictional 8-hour plan, optionally with reported fatigue | Plan review, not diagnosis or medication advice. |
 | Handgrip below 80% of a fictional 40 kgf baseline | Illustration of the cited NASA strength-maintenance requirement, not whole-body assessment or fitness clearance. |
-| Incomplete/stale fluid logging | Coverage limitation, not dehydration or an intake prescription. |
+| Missing/stale fluid logging | Data availability limitation, not dehydration or an intake prescription. |
 | Optional digestive discomfort and co-occurring low mood | Review context only; no inferred deficiency or supplement recommendation. |
 | Pending assessment task due | Completion not recorded, not proof that the activity was missed. |
 
 The inclusive 24-hour freshness windows are demo policies. Missing, stale, future, and declined records do not become reassuring negative results. Raw historical measurements remain timestamped and may still be displayed after their eligibility for inference expires.
+
+Entered fluid amounts are accepted on save without a separate confirmation. Saving a daily check-in completes its task and, when a current handgrip reading was retrieved, the assessment task. Missing or stale measurements remain explicit; movement tasks are not completed by a check-in.
 
 Explanation metadata is authored and linked to observations, not an automatically generated ELM proof tree. Detail dialogs retain the selected evaluation snapshot across refreshes.
 
@@ -61,7 +73,7 @@ The browser-install command is needed only if Chromium is missing. Browser tests
 
 Verification covers CQL boundaries and unknowns, corrected records, stale-result rejection, notices, tasks, export privacy, native reminder planning, desktop/phone journeys, source/engine/storage failures, cross-tab conflicts, worker timeout/cancellation, and explanation-snapshot consistency. Phone-sized Chromium is not a physical Android/WebView test. The browser journey also checks for unexpected external requests and page errors.
 
-The verified release passes **17 application tests**, **20 desktop/phone browser tests**, strict type-check/production build, and Android asset/plugin synchronization. All **11 existing POC tests** also pass. Desktop and phone dashboard layouts were visually inspected; these checks do not close the native build or hardware gates below.
+The verified release passes **18 application tests**, **24 desktop/phone browser tests**, strict type-check/production build, and Android asset/plugin synchronization. All **11 existing POC tests** also pass. Desktop and phone dashboard layouts were visually inspected; these checks do not close the native build or hardware gates below.
 
 `npm run build` compiles the authored CQL, rejects compiler diagnostics, type-checks strict TypeScript, and creates the static `dist` site. Current Vite output includes an upstream Lucide `"use client"` directive warning; this is a client-rendered application, not React Server Components.
 
@@ -93,7 +105,7 @@ Record device models, OS/WebView versions, pairing settings, build version, and 
 
 ## Move to another PC
 
-The source transfer includes the application, pinned npm lockfiles, tests, research documents, logo, CQL sources/model/license, POC scripts, and both generated Android project scaffolds. Keep the `poc` directory: the main application uses its compiler and Android helper.
+The source transfer includes the application, pinned npm lockfiles, research documents, logo, CQL sources and model, and generated Android project scaffolding. CQL compilation is independent of `poc`; the existing Android helper commands still refer to that removed directory and require replacement before they can run.
 
 Dependencies, compiled web assets, downloaded tools, SDKs/JDKs, Gradle caches, emulator images, machine-specific SDK paths, signing keys, and test reports are excluded. Browser-local saved profiles and observations are not part of the source transfer. This is a source handoff, not an offline installer or an APK release; internet access is needed to restore dependencies and native tooling.
 

@@ -1,9 +1,0 @@
-:root { font-family: system-ui, sans-serif; color: #172f2c; background: #edf4f1; }
-body { margin: 0; }
-main { max-width: 860px; padding: 1.5rem; margin: auto; }
-section { background: white; border: 1px solid #cadbd4; border-radius: 12px; padding: 1rem; margin: 1rem 0; }
-button, select { font: inherit; padding: .7rem; margin: .25rem; max-width: 100%; }
-button { cursor: pointer; }
-button:disabled { cursor: not-allowed; }
-pre { overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; font-size: .85rem; }
-:focus-visible { outline: 3px solid #1b7465; outline-offset: 3px; }

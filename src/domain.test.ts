@@ -6,6 +6,7 @@ import {
 import { commitCheckIn, defaultCheckIn, makeWorkspace, retrieveSensors } from './fixtures.ts';
 import { evaluate } from './engine.ts';
 import { plannedReminders } from './native.ts';
+import { catalogInputs } from './input-catalog.ts';
 
 const at = '2026-11-14T10:00:00.000Z';
 async function prepared(scenario: 'attention' | 'recovery' | 'source-gap' | 'engine-fault' = 'attention') {
@@ -19,7 +20,7 @@ test('saved synthetic records produce multi-domain CQL findings and distinct bod
   const result = await evaluate(workspace, at);
   assert.equal(result.values['SleepAndFatigue'], true);
   assert.equal(result.values['StrengthRatio'], 0.78);
-  assert.equal(result.findings.filter(item => item.region === 'arms').length, 2);
+  assert.equal(result.findings.filter(item => item.region === 'arms').length, 1);
   assert.ok(result.findings.some(item => item.region === 'whole'));
   assert.ok(result.findings.some(item => item.region === 'abdomen' && item.association === 'reported location'));
   assert.ok(result.findings.every(item => item.proof.length && item.limits && item.evidenceId));
@@ -35,7 +36,7 @@ test('corrections retain original records and withdraw dependent notices without
   workspace = attachEvaluation(workspace, await evaluate(workspace, at));
   const original = latest(workspace, 'sleep')!;
   const corrected = commitCheckIn(workspace, {
-    ...defaultCheckIn(workspace), sleep: 8.2, fatigue: false, mood: 'steady', bowel: 'none', fluidComplete: true,
+    ...defaultCheckIn(workspace), sleep: 8.2, fatigue: false, mood: 'steady', bowel: 'none',
   }, { observations: [], sources: workspace.sources }, '2026-11-14T10:01:00.000Z');
   const next = attachEvaluation(corrected, await evaluate(corrected, '2026-11-14T10:01:00.000Z'));
   assert.ok(next.observations.some(item => item.id === original.id));
@@ -72,7 +73,7 @@ test('withdrawn-to-active creates a new explicit notice occurrence, not a render
 test('missing and declined values remain explicit; optional reports never become negative findings', async () => {
   const initial = await prepared();
   const workspace = commitCheckIn(initial, {
-    sleep: null, fluid: null, fatigue: null, mood: null, bowel: null, fluidComplete: false,
+    sleep: null, fluid: null, fatigue: null, mood: null, bowel: null,
   }, { observations: [], sources: initial.sources }, '2026-11-14T10:01:00.000Z');
   const result = await evaluate(workspace, '2026-11-14T10:01:00.000Z');
   assert.equal(latest(workspace, 'mood')?.availability, 'declined');
@@ -94,12 +95,66 @@ test('source outage retains original history and does not manufacture a current 
 });
 
 test('time alone expires evidence, including old completed fluid coverage', async () => {
-  const workspace = await prepared('recovery');
+  const workspace = { ...await prepared('recovery'), fluidCoverageComplete: true };
+  assert.equal((await evaluate(workspace, at)).values['FluidLogIncomplete'], false);
   const result = await evaluate(workspace, '2026-11-15T10:00:00.001Z');
   assert.equal(result.values['SleepBelowPlan'], null);
   assert.equal(result.values['StrengthRatio'], null);
   assert.equal(result.values['FluidLogIncomplete'], true);
   assert.equal(result.values['AbdominalReport'], null);
+});
+
+test('a saved fluid entry is accepted without a separate confirmation, including legacy workspaces', async () => {
+  const previous = { ...await prepared(), fluidCoverageComplete: false };
+  const saved = commitCheckIn(previous, defaultCheckIn(previous), { observations: [], sources: previous.sources }, '2026-11-14T10:01:00.000Z');
+  const result = await evaluate(saved, '2026-11-14T10:01:00.000Z');
+  assert.equal(saved.fluidCoverageComplete, true);
+  assert.equal(result.values['FluidLogIncomplete'], false);
+  assert.equal((await evaluate(previous, at)).values['FluidLogIncomplete'], false);
+  assert.ok(!result.findings.some(item => item.id === 'fluid-coverage'));
+});
+
+test('daily check-in generates supplemental readings, preserves entered values, and completes recorded tasks', async () => {
+  const workspace = makeWorkspace('alex', 'standard', 'attention', at);
+  const sources = await retrieveSensors(workspace, new AbortController().signal);
+  const retrieval = { ...sources, observations: sources.observations.map(item => ({ ...item, observedAt: at, recordedAt: at })) };
+  const input = { sleep: 8.5, fluid: 0, fatigue: false, mood: 'steady', bowel: 'none' } as const;
+  const saved = commitCheckIn(workspace, input, retrieval, at);
+  assert.equal(latest(saved, 'sleep')?.value, 8.5);
+  assert.equal(latest(saved, 'fluid')?.value, 0);
+  assert.equal(latest(saved, 'strength')?.id, retrieval.observations.find(item => item.indicator === 'strength')?.id);
+  assert.equal(typeof latest(saved, 'environmentalRadiation')?.value, 'number');
+  assert.equal(typeof latest(saved, 'personalRadiation')?.value, 'number');
+  assert.equal(latest(saved, 'spaceWeather')?.availability, 'recorded');
+  for (const indicator of ['fluid', ...catalogInputs.filter(item => item.kind === 'number').map(item => item.id)]) {
+    const history = saved.observations.filter(item => item.indicator === indicator && item.observedAt < at);
+    assert.equal(history.length, 7, `${indicator} has a week of numeric history`);
+    assert.ok(history.every(item => typeof item.value === 'number' && item.unit && item.origin === 'synthetic'));
+    assert.equal(new Set(history.map(item => item.observedAt.slice(0, 10))).size, 7);
+  }
+  assert.ok(saved.tasks.filter(task => task.kind === 'assessment' || task.kind === 'checkin')
+    .every(task => task.status === 'completed' && task.respondedAt === at));
+  assert.equal(saved.tasks.find(task => task.kind === 'movement')?.status, 'pending');
+  const result = await evaluate(saved, at);
+  assert.equal(result.values['AssessmentDue'], false);
+  assert.equal(result.values['FluidLogIncomplete'], false);
+  const nextAt = '2026-11-14T10:01:00.000Z';
+  const again = commitCheckIn(saved, input, retrieval, nextAt);
+  assert.ok(saved.observations.every(item => again.observations.some(record => record.id === item.id)));
+  assert.equal(latest(again, 'environmentalRadiation')?.observedAt, nextAt);
+  assert.equal(again.observations.filter(item => item.indicator === 'environmentalRadiation' && item.observedAt < at).length, 7);
+});
+
+test('daily check-in does not complete a failed assessment or accept a missing fluid amount', async () => {
+  const workspace = makeWorkspace('alex', 'standard', 'source-gap', at);
+  const retrieval = await retrieveSensors(workspace, new AbortController().signal);
+  const saved = commitCheckIn(workspace, { ...defaultCheckIn(workspace), fluid: null }, retrieval, at);
+  assert.equal(saved.tasks.find(task => task.kind === 'assessment')?.status, 'pending');
+  assert.equal(saved.tasks.find(task => task.kind === 'checkin')?.status, 'completed');
+  assert.equal(latest(saved, 'strength')?.method, 'seed');
+  const result = await evaluate(saved, at);
+  assert.equal(result.values['AssessmentDue'], true);
+  assert.equal(result.values['FluidLogIncomplete'], true);
 });
 
 test('exact reference equality is not below reference; future evidence is ineligible', async () => {
@@ -175,6 +230,7 @@ test('native planning uses stable persona-scoped IDs, future pending tasks, and 
   assert.equal(reminders.length, 2);
   assert.deepEqual(plannedReminders(workspace, Date.parse(at)), reminders);
   assert.ok(reminders.every(item => item.isExactNotification === false && item.body?.includes('UTC')));
+  assert.ok(reminders.every(item => item.body?.startsWith('Example task due')));
   assert.ok(reminders.every(item => !/Alex|mood|strength|31\.2|78%/i.test(item.body ?? '')));
   const maya = plannedReminders({ ...workspace, personaId: 'maya' }, Date.parse(at));
   assert.ok(maya.every(item => !reminders.some(other => other.id === item.id)));

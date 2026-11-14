@@ -4,8 +4,9 @@ import {
   Dumbbell, Heart, Moon, ShieldCheck, Sparkles, X,
 } from 'lucide-react';
 import {
-  displayValue, indicators, latest, numeric, regionSchema, type Finding, type Indicator, type Region, type Task, type Workspace,
+  displayValue, indicators, latest, numeric, type Finding, type Indicator, type Region, type Task, type Workspace,
 } from './domain.ts';
+import { basicRanges, catalogById, catalogInputs } from './input-catalog.ts';
 
 export function utc(value: string) {
   return new Date(value).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'UTC' });
@@ -37,10 +38,11 @@ export function Modal({ title, children, onClose, wide = false }: { title: strin
   </dialog>;
 }
 
-export function BodyMap({ workspace, selected, onSelect, onFigure }: {
-  workspace: Workspace; selected: Region | null; onSelect: (region: Region | null) => void;
-  onFigure: (figure: Workspace['figure']) => void;
+export function BodyMap({ workspace, selected, onSelect, onOpen }: {
+  workspace: Workspace; selected: Region | null; onSelect: (region: Region | null) => void; onOpen: (finding: Finding) => void;
 }) {
+  const findings = workspace.evaluation?.findings ?? [];
+  const ordered = [...findings.filter(item => item.level === 'review'), ...findings.filter(item => item.level === 'gap'), ...findings.filter(item => item.level === 'context')];
   const counts = (region: Region) => workspace.evaluation?.findings.filter(item => item.region === region).length ?? 0;
   const female = workspace.figure === 'female';
   const marker = (region: Region, x: number, y: number) => counts(region) > 0 && <g
@@ -56,10 +58,6 @@ export function BodyMap({ workspace, selected, onSelect, onFigure }: {
   </g>;
   return <section className="card body-card" aria-label="Body navigator">
     <div className="section-top"><div><p className="eyebrow">THE HUMAN PICTURE</p><h2>Your body, in context</h2></div><Activity size={19} /></div>
-    <div className="figure-switch" aria-label="Figure presentation">
-      <button aria-pressed={!female} onClick={() => onFigure('male')}>Male figure</button>
-      <button aria-pressed={female} onClick={() => onFigure('female')}>Female figure</button>
-    </div>
     <svg viewBox="0 0 320 440" className="body-drawing" role="group" aria-label="Original Da Vinci-inspired body navigator">
       <defs><pattern id="paper-grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="var(--figure-grid)" strokeWidth=".35" /></pattern></defs>
       <rect x="10" y="12" width="300" height="410" fill="url(#paper-grid)" />
@@ -84,12 +82,12 @@ export function BodyMap({ workspace, selected, onSelect, onFigure }: {
       {marker('whole', 267, 54)}{marker('arms', 112, 175)}{marker('abdomen', 161, 220)}
       <text x="160" y="424" textAnchor="middle" className="figure-caption">FIG. 01 / HUMAN SYSTEMS</text>
     </svg>
-    <div className="body-legend">
-      {regionSchema.options.map(region => <button key={region} aria-pressed={selected === region} onClick={() => onSelect(selected === region ? null : region)}>
-        <span className={`legend-dot ${counts(region) ? 'lit' : ''}`} />{regionNames[region]}<span className="count">{counts(region)}</span>
+    <div className="body-legend" role="group" aria-label="Current inference findings">
+      {ordered.map(finding => <button key={finding.id} onClick={() => onOpen(finding)}>
+        <span className={`legend-dot ${finding.level === 'review' ? 'lit' : ''}`} />{finding.title}<span className="count">{finding.level === 'review' ? 'For review' : finding.level === 'gap' ? 'Data gap' : 'Context'}</span>
       </button>)}
+      {!ordered.length && <p className="muted small">{workspace.evaluation ? 'No current findings. This is not a health clearance.' : 'Complete a daily check-in to see findings.'}</p>}
     </div>
-    <p className="fine-print"><ShieldCheck size={13} />Markers mean information to inspect, not organ damage. Unmarked regions are not assessed.</p>
   </section>;
 }
 
@@ -103,10 +101,10 @@ export function Sparkline({ values, color = 'var(--accent)' }: { values: number[
 export function Metrics({ workspace, onSelect }: { workspace: Workspace; onSelect: (id: Indicator) => void }) {
   const ratio = workspace.evaluation?.values['StrengthRatio'];
   const specs = [
-    { id: 'heartRate', title: 'Resting heart rate', icon: Heart, value: numeric(latest(workspace, 'heartRate')), unit: 'bpm', detail: 'Simulated sensor · at rest', className: 'pulse' },
-    { id: 'sleep', title: 'Sleep last recorded', icon: Moon, value: numeric(latest(workspace, 'sleep')), unit: 'h', detail: 'Fictional plan · 8 h target', className: 'sleep' },
-    { id: 'strength', title: 'Strength / baseline', icon: Dumbbell, value: typeof ratio === 'number' ? Math.round(ratio * 100) : null, unit: '%', detail: 'Like-for-like handgrip test', className: 'strength' },
-    { id: 'fluid', title: 'Fluid intake logged', icon: Droplets, value: numeric(latest(workspace, 'fluid')), unit: 'mL', detail: workspace.fluidCoverageComplete ? 'Coverage marked complete' : 'Partial log · not hydration status', className: 'fluid' },
+    { id: 'heartRate', title: 'Resting heart rate', icon: Heart, value: numeric(latest(workspace, 'heartRate')), unit: 'bpm', detail: 'Local reading · at rest', className: 'pulse' },
+    { id: 'sleep', title: 'Sleep last recorded', icon: Moon, value: numeric(latest(workspace, 'sleep')), unit: 'h', detail: '8 h reference target', className: 'sleep' },
+    { id: 'strength', title: 'Strength / baseline', icon: Dumbbell, value: typeof ratio === 'number' ? Math.round(ratio * 100) : null, unit: '%', detail: 'Like-for-like handgrip assessment', className: 'strength' },
+    { id: 'fluid', title: 'Fluid intake logged', icon: Droplets, value: numeric(latest(workspace, 'fluid')), unit: 'mL', detail: 'Recorded intake · not hydration status', className: 'fluid' },
   ] satisfies { id: Indicator; title: string; icon: typeof Heart; value: number | null; unit: string; detail: string; className: string }[];
   return <div className="metrics-grid">{specs.map(({ id, title, icon: Icon, value, unit, detail, className }) => {
     const observation = latest(workspace, id);
@@ -121,62 +119,105 @@ export function Metrics({ workspace, onSelect }: { workspace: Workspace; onSelec
   })}</div>;
 }
 
+export function findingText(text: string) {
+  return text.replace('Illustrative plan target', 'Reference target')
+    .replace('Illustrative baseline', 'Fixed reference baseline')
+    .replace('illustrative target', 'reference target')
+    .replace('illustrative 8-hour target', '8-hour reference target')
+    .replace('illustrative handgrip baseline', 'fixed handgrip reference baseline');
+}
+
 export function Findings({ findings, region, onClear, onOpen }: {
   findings: Finding[]; region: Region | null; onClear: () => void; onOpen: (finding: Finding) => void;
 }) {
-  const [expanded, setExpanded] = useState(false);
   const filtered = region ? findings.filter(item => item.region === region) : findings;
-  const displayed = expanded || region ? filtered : filtered.slice(0, 3);
+  const ordered = [...filtered.filter(item => item.level === 'review'), ...filtered.filter(item => item.level !== 'review')];
   return <section className="card findings-card">
     <div className="section-top"><div><p className="eyebrow">EXPLAINABLE INSIGHTS</p><h2>{region ? regionNames[region] : 'Worth a closer look'}</h2></div>
       {region ? <button className="text-button" onClick={onClear}>Show all</button> : <Badge tone="amber">{findings.filter(item => item.level === 'review').length} for review</Badge>}
     </div>
     {!filtered.length && <Empty title="No mapped finding">This is not an overall health clearance. Uninterpreted or missing information may remain.</Empty>}
-    {displayed.map(finding => <button className="finding-row" key={finding.id} onClick={() => onOpen(finding)}>
+    {ordered.map(finding => <button className="finding-row" key={finding.id} onClick={() => onOpen(finding)}>
       <span className={`finding-icon ${finding.level}`}>{finding.level === 'gap' ? <Clock3 size={18} /> : finding.level === 'review' ? <Activity size={18} /> : <Sparkles size={18} />}</span>
-      <span className="finding-copy"><strong>{finding.title}{finding.private && <span className="private-tag">PRIVATE</span>}</strong><span>{finding.summary}</span></span>
+      <span className="finding-copy"><strong>{finding.title}{finding.private && <span className="private-tag">PRIVATE</span>}</strong><span>{findingText(finding.summary)}</span></span>
       <ChevronRight size={17} />
     </button>)}
-    {!region && filtered.length > 3 && <button className="text-button view-more" onClick={() => setExpanded(!expanded)}>{expanded ? 'Show less' : `View all ${filtered.length} insights`}<ChevronRight size={14} /></button>}
   </section>;
+}
+
+const trendIndicators: Indicator[] = ['sleep', 'heartRate', 'strength', 'fluid', ...catalogInputs.filter(item => item.kind === 'number').map(item => item.id)];
+function trendNumber(value: number) {
+  return value !== 0 && (Math.abs(value) < 0.001 || Math.abs(value) >= 100_000)
+    ? value.toExponential(2) : new Intl.NumberFormat(undefined, { maximumSignificantDigits: 4 }).format(value);
 }
 
 export function Trend({ workspace }: { workspace: Workspace }) {
   const [table, setTable] = useState(false);
-  const records = workspace.observations.filter(item => item.indicator === 'sleep' && typeof item.value === 'number'
-    && !workspace.observations.some(other => other.supersedes === item.id))
+  const [indicator, setIndicator] = useState<Indicator>('sleep');
+  const { label, unit } = indicators[indicator];
+  const superseded = new Set(workspace.observations.flatMap(item => item.supersedes ? [item.supersedes] : []));
+  const records = workspace.observations.flatMap(item =>
+    item.indicator === indicator && item.availability === 'recorded' && typeof item.value === 'number' && !superseded.has(item.id)
+      ? [{ ...item, value: item.value }] : [])
     .sort((a, b) => a.observedAt.localeCompare(b.observedAt)).slice(-7);
-  const points = records.map((item, index) => `${30 + index * 440 / Math.max(1, records.length - 1)},${170 - Number(item.value) * 15}`).join(' ');
-  return <section className="card trend-card">
-    <div className="section-top"><div><p className="eyebrow">YOUR PATTERNS</p><h2>Sleep, over time</h2></div><button className="text-button" onClick={() => setTable(!table)}>{table ? 'Show chart' : 'View data'}</button></div>
-    <div className="chart-legend"><span><i />Recorded sleep</span><span className="plan"><i />Fictional 8 h target</span></div>
-    {table ? <div className="table-scroll"><table><caption className="sr-only">Recorded sleep history</caption><thead><tr><th>Date (UTC)</th><th>Hours</th><th>Method</th></tr></thead><tbody>{records.map(item => <tr key={item.id}><td>{dateLabel(item.observedAt)}</td><td>{String(item.value)}</td><td>{item.method}</td></tr>)}</tbody></table></div>
-      : <svg className="trend-chart" viewBox="0 0 500 215" role="img" aria-label="Sleep trend with a fictional eight-hour plan reference. Use View data for individual values.">
-        {[4, 6, 8, 10].map(value => <g key={value}><line x1="30" x2="470" y1={170 - value * 15} y2={170 - value * 15} stroke="var(--border)" /><text x="4" y={174 - value * 15}>{value}h</text></g>)}
-        <line x1="30" x2="470" y1="50" y2="50" stroke="var(--amber)" strokeDasharray="5 5" />
-        <polyline points={points} fill="none" stroke="var(--accent)" strokeWidth="2.5" strokeLinejoin="round" />
-        {records.map((item, index) => <g key={item.id}><circle cx={30 + index * 440 / Math.max(1, records.length - 1)} cy={170 - Number(item.value) * 15} r="4" fill="var(--accent)" stroke="var(--surface)" strokeWidth="2" /><text x={30 + index * 440 / Math.max(1, records.length - 1)} y="200" textAnchor="middle">{dateLabel(item.observedAt)}</text></g>)}
-      </svg>}
+  const range = indicator === 'sleep' ? [8, 8] as const
+    : indicator === 'fluid' ? undefined : catalogById.get(indicator)?.range ?? basicRanges[indicator];
+  const values = [...records.map(item => item.value), ...(range ?? [])];
+  const min = values.length ? Math.min(...values) : 0;
+  const max = values.length ? Math.max(...values) : 1;
+  const padding = (max - min || Math.max(Math.abs(min) * 0.2, 1)) * 0.1;
+  const lower = min - padding;
+  const upper = max + padding;
+  const y = (value: number) => 175 - (value - lower) / (upper - lower) * 145;
+  const x = (index: number) => records.length === 1 ? 300 : 70 + index * 460 / Math.max(1, records.length - 1);
+  const points = records.map((item, index) => `${x(index)},${y(item.value)}`).join(' ');
+  const reference = range ? indicator === 'sleep' ? '8 h reference target'
+    : `${range[0]}-${range[1]} ${unit} example range` : null;
+  return <section className="card trend-card" aria-label="Numeric observation trends">
+    <div className="section-top"><div><p className="eyebrow">YOUR PATTERNS</p><h2>{label}, over time</h2></div><button className="text-button" onClick={() => setTable(!table)}>{table ? 'Show chart' : 'View data'}</button></div>
+    <label className="trend-selector">Indicator<select aria-label="Trend indicator" value={indicator} onChange={event => {
+      const next = trendIndicators.find(id => id === event.target.value);
+      if (!next) throw new Error('Unknown numeric trend indicator.');
+      setIndicator(next);
+    }}>{trendIndicators.map(id => <option key={id} value={id}>{indicators[id].label} ({indicators[id].unit})</option>)}</select></label>
+    <div className="chart-legend"><span><i />Recorded {label.toLowerCase()} ({unit})</span>{reference && <span className="plan"><i />{reference}</span>}</div>
+    {!records.length ? <Empty title="No recorded values">No numeric observations are available for {label.toLowerCase()}. Missing or declined entries are not plotted.</Empty>
+      : table ? <div className="table-scroll"><table><caption className="sr-only">{label} history</caption><thead><tr><th>Observation (UTC)</th><th>Value ({unit})</th><th>Method</th></tr></thead><tbody>{records.map(item => <tr key={item.id}><td>{dateLabel(item.observedAt)} {utc(item.observedAt)}</td><td>{String(item.value)}</td><td>{item.method}</td></tr>)}</tbody></table></div>
+        : <svg className="trend-chart" viewBox="0 0 560 215" role="img" aria-label={`${label} trend in ${unit}.${reference ? ` ${reference}.` : ''} Use View data for individual values.`}>
+          {Array.from({ length: 5 }, (_, index) => lower + (upper - lower) * index / 4).map(value => <g key={value}><line x1="70" x2="530" y1={y(value)} y2={y(value)} stroke="var(--border)" /><text x="60" y={y(value) + 4} textAnchor="end">{trendNumber(value)}</text></g>)}
+          {range && [...new Set(range)].map(value => <line key={value} x1="70" x2="530" y1={y(value)} y2={y(value)} stroke="var(--amber)" strokeDasharray="5 5" />)}
+          <polyline points={points} fill="none" stroke="var(--accent)" strokeWidth="2.5" strokeLinejoin="round" />
+          {records.map((item, index) => <g key={item.id}><circle cx={x(index)} cy={y(item.value)} r="4" fill="var(--accent)" stroke="var(--surface)" strokeWidth="2"><title>{`${item.observedAt}: ${item.value} ${unit}`}</title></circle><text x={x(index)} y="200" textAnchor="middle">{dateLabel(item.observedAt)}</text></g>)}
+        </svg>}
     <p className="fine-print">Points are individual records, not continuous sensor coverage. Reference ≠ diagnosis.</p>
   </section>;
+}
+
+function routineDetail(detail: string) {
+  return detail
+    .replace('fictional, like-for-like handgrip test', 'handgrip assessment')
+    .replace('unsupported test', 'unsupported assessment')
+    .replace('recorded fictional countermeasure plan', 'countermeasure plan')
+    .replace('example handgrip assessment', 'handgrip assessment')
+    .replace('example countermeasure plan', 'countermeasure plan');
 }
 
 export function Routine({ workspace, onTask, full = false }: { workspace: Workspace; onTask: (id: string, status: Task['status']) => void; full?: boolean }) {
   const completed = workspace.tasks.filter(item => item.status === 'completed').length;
   return <section className="card routine-card">
     <div className="section-top"><div><p className="eyebrow">SMALL STEPS, EACH DAY</p><h2>Your health routine</h2></div><Badge>{completed}/{workspace.tasks.length} complete</Badge></div>
-    <p className="muted small">Fictional individual plan v1 · all times UTC</p>
+    <p className="muted small">All times UTC</p>
     {workspace.tasks.map(task => <div className={`task-row ${task.status}`} key={task.id}>
       <button className="task-check" aria-label={`${task.status === 'completed' ? 'Undo' : 'Complete'} ${task.title}`}
         aria-pressed={task.status === 'completed'} onClick={() => onTask(task.id, task.status === 'completed' ? 'pending' : 'completed')}>
         {task.status === 'completed' && <Check size={14} />}
       </button>
       <div className="task-copy"><span>{utc(task.dueAt)} <span className="muted">UTC</span></span><strong>{task.title}</strong>
-        {full && <p>{task.detail}</p>}<span className="task-status">{task.status === 'pending' ? 'Completion not recorded' : task.status}</span></div>
+        {full && <p>{routineDetail(task.detail)}</p>}<span className="task-status">{task.status === 'pending' ? 'Completion not recorded' : task.status}</span></div>
       {task.status === 'pending' && full && <button className="text-button" onClick={() => onTask(task.id, 'skipped')}>Skip</button>}
       {task.status === 'skipped' && <button className="text-button" onClick={() => onTask(task.id, 'pending')}>Restore</button>}
     </div>)}
-    <p className="fine-print">A completed task is not evidence that a health finding has resolved.</p>
+    {full && <p className="fine-print">A completed task is not evidence that a health finding has resolved.</p>}
   </section>;
 }
 
@@ -186,7 +227,7 @@ export function MetricDetails({ workspace, indicator }: { workspace: Workspace; 
     <p className="metric-number detail-value">{displayValue(item)}</p>
     <dl className="details-grid">
       <dt>Indicator</dt><dd>{indicators[indicator].label}</dd><dt>Observed</dt><dd>{item?.observedAt ?? 'Unavailable'}</dd>
-      <dt>Source</dt><dd>{item?.sourceId ?? 'Unavailable'} · synthetic</dd><dt>Availability</dt><dd>{item?.availability ?? 'missing'}</dd>
+      <dt>Source</dt><dd>{!item ? 'Unavailable' : item.method === 'sensor' ? 'Generated reading' : item.method === 'seed' ? 'Generated history' : 'Manual check-in'}</dd><dt>Availability</dt><dd>{item?.availability ?? 'missing'}</dd>
       <dt>Record ID</dt><dd className="mono">{item?.id ?? 'None'}</dd><dt>Record revision</dt><dd>{item?.revision ?? '—'}</dd>
     </dl>
     <p className="callout">Raw observations and derived interpretations are different. A displayed value is not a diagnosis or assurance of normality.</p>
