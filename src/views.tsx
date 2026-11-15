@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import {
-  Activity, ArrowDown, ArrowRight, Bell, BookOpen, Brain, CalendarDays, Check, ChevronDown, ClipboardList, CloudSun, Download, Droplets, Dumbbell,
+  Activity, ArrowRight, BookOpen, Brain, CalendarDays, Check, ChevronDown, ClipboardList, CloudSun, Download, Droplets, Dumbbell,
   ExternalLink, Eye, FileText, FlaskConical, Heart, Lightbulb, ListFilter, MapPin, Moon, Orbit, Pill, Radio, Radiation, RefreshCw, Scan,
-  Settings, ShieldCheck, Stethoscope, Thermometer, UserRound, Users, Utensils, Watch, WifiOff, Wind, Wrench,
+  ShieldCheck, Thermometer, UserRound, Users, Utensils, Watch, WifiOff, Wind, Wrench,
 } from 'lucide-react';
 import {
   evidence, indicatorIds, indicators, latest, personas, type Finding, type Indicator, type PersonaId, type Region, type Workspace,
@@ -64,66 +64,6 @@ export function Login({ onSignIn, busy }: { onSignIn: (id: PersonaId) => void; b
   </main>;
 }
 
-const inputGroups = [
-  { title: 'Astronaut & baseline', icon: UserRound, items: [
-    { label: 'Identity & assignment', icon: UserRound },
-    { label: 'Individual baseline', icon: Activity },
-    { label: 'Medical context', icon: Stethoscope },
-    { label: 'Individual plan', icon: ClipboardList },
-    { label: 'Preferences & accessibility', icon: Settings },
-  ] },
-  { title: 'Physiology & medical', icon: Heart, items: [
-    { label: 'Heart rate', icon: Heart },
-    { label: 'Blood pressure', icon: Activity },
-    { label: 'Body temperature', icon: Thermometer },
-    { label: 'Blood glucose', icon: Droplets },
-    { label: 'Oxygen saturation & breathing', icon: Wind },
-    { label: 'Symptoms & functional changes', icon: Stethoscope },
-    { label: 'Eye & vision observations', icon: Eye },
-    { label: 'Balance, motion sickness & coordination', icon: Activity },
-    { label: 'Strength & physical performance', icon: Dumbbell },
-    { label: 'Aerobic capacity', icon: Heart },
-    { label: 'Imaging & exam findings', icon: Scan },
-    { label: 'Lab & biomarker results', icon: FlaskConical },
-    { label: 'Body mass, bone & composition', icon: Activity },
-    { label: 'Medication, supplements & interventions', icon: Pill },
-  ] },
-  { title: 'Daily life & wellbeing', icon: Moon, items: [
-    { label: 'Sleep', icon: Moon },
-    { label: 'Mood & wellbeing', icon: Heart },
-    { label: 'Cognition & attention', icon: Brain },
-    { label: 'Workload & schedule', icon: CalendarDays },
-    { label: 'Physical activity & exercise', icon: Dumbbell },
-    { label: 'Food & nutrition', icon: Utensils },
-    { label: 'Fluid intake & hydration-related symptoms', icon: Droplets },
-    { label: 'Social connection & crew interaction', icon: Users },
-    { label: 'Measurement & task adherence', icon: ClipboardList },
-  ] },
-  { title: 'Mission & environment', icon: Orbit, items: [
-    { label: 'Mission phase & location', icon: MapPin },
-    { label: 'Gravity & transitions', icon: Orbit },
-    { label: 'Isolation & confinement', icon: Users },
-    { label: 'Communication & support availability', icon: Radio },
-    { label: 'Personal radiation exposure', icon: Radiation },
-    { label: 'Environmental radiation & neutron monitoring', icon: Radiation },
-    { label: 'Space-weather events', icon: CloudSun },
-    { label: 'Cabin atmosphere', icon: Wind },
-    { label: 'Light, noise & habitability', icon: Lightbulb },
-    { label: 'Microbial & environmental observations', icon: FlaskConical },
-    { label: 'Spacewalk & suit context', icon: Orbit },
-    { label: 'Equipment, supplies & support', icon: Wrench },
-  ] },
-  { title: 'Knowledge & interaction', icon: BookOpen, items: [
-    { label: 'Scientific evidence', icon: BookOpen },
-    { label: 'Procedures & guidance', icon: FileText },
-    { label: 'Definitions & rules', icon: Settings },
-    { label: 'Alert & reminder configuration', icon: Bell },
-    { label: 'User actions & feedback', icon: Check },
-    { label: 'Consent & access preferences', icon: ShieldCheck },
-    { label: 'Device & source state', icon: Watch },
-  ] },
-];
-
 function ArchitectureLink({ compact = false }: { compact?: boolean }) {
   const [open, setOpen] = useState(false);
   return <>
@@ -132,41 +72,10 @@ function ArchitectureLink({ compact = false }: { compact?: boolean }) {
     </button>
     {open && <Modal title="How ST-HA works" wide onClose={() => setOpen(false)}>
       <p className="architecture-intro">Follow the path from health observations to explained findings and next steps.</p>
-      <div className="architecture-diagram" aria-label="ST-HA system overview">
-        <section className="architecture-stage">
-          <p className="architecture-kicker">01 / INPUTS</p>
-          <h3>Input landscape</h3>
-          <p className="architecture-scope">Input areas and current capabilities</p>
-          <div className="architecture-input-groups">
-            {inputGroups.map(({ title, icon: Icon, items }) => <section className="architecture-input-group" key={title}>
-              <h4><Icon aria-hidden="true" />{title}</h4>
-              <ul>{items.map(({ label, icon: ItemIcon }) => <li key={label}><ItemIcon aria-hidden="true" /><span>{label}</span></li>)}</ul>
-            </section>)}
-          </div>
-          <p className="architecture-scope-note"><strong>Available now:</strong> grouped manual inputs and simulated pulse and handgrip readings. Some broad input areas are captured only as free-text context; detailed structured fields and integrations remain incomplete.</p>
-          <p className="architecture-scope-note">Records retain a value, time, source and correction identity. Scope is identified by input type; richer measurement conditions and access controls are not yet implemented.</p>
-        </section>
-        <div className="architecture-arrow" aria-hidden="true"><ArrowDown /></div>
-        <section className="architecture-stage architecture-engine">
-          <p className="architecture-kicker">02 / KNOWLEDGE &amp; INFERENCE</p>
-          <div className="architecture-engine-icon"><Settings /></div>
-          <h3>CQL inference engine</h3>
-          <p>Knowledge rules evaluated on-device</p>
-          <div className="architecture-engine-detail">Freshness · thresholds · context<br /><span>Evidence and uncertainty remain visible</span></div>
-        </section>
-        <div className="architecture-arrow" aria-hidden="true"><ArrowDown /></div>
-        <section className="architecture-stage">
-          <p className="architecture-kicker">03 / EXPERIENCE</p>
-          <h3>Understanding &amp; action</h3>
-          <div className="architecture-items">
-            <div className="architecture-item"><Activity /><div><strong>Health workspace</strong><span>Body navigator, metrics and trends</span></div></div>
-            <div className="architecture-item"><BookOpen /><div><strong>Explained findings</strong><span>Reasons, sources and limitations</span></div></div>
-            <div className="architecture-item"><Bell /><div><strong>Tasks &amp; reminders</strong><span>Routine actions and notifications</span></div></div>
-            <div className="architecture-item"><Download /><div><strong>Private export</strong><span>Preview and privacy-filtered JSON</span></div></div>
-          </div>
-        </section>
-        <p className="architecture-local"><ShieldCheck /><span><strong>Local-first by design</strong><br />Records stay on the device unless exported. Pulse is displayed; CQL evaluates the relevant health and assessment inputs.</span></p>
+      <div className="architecture-image-container" tabIndex={0} aria-label="Scrollable system overview diagram">
+        <img className="architecture-image" src={`${import.meta.env.BASE_URL}st-ha-how-it-works.svg`} alt="Health measurements, daily wellbeing, personal and mission context flow through a NASA-informed knowledge base and CQL inference engine to dashboard insights, routines, mobile and wearable experiences, and history. Scenario Lab previews changes without saving." />
       </div>
+      <p className="architecture-scope-note">The diagram summarizes the input landscape. Some inputs are captured as free-text context rather than evaluated by CQL, sensor readings are simulated, and wearable reminder delivery depends on the device and configuration.</p>
     </Modal>}
   </>;
 }

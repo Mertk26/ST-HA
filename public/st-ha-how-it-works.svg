@@ -1,144 +1,127 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title description">
-  <title id="title">ST-HA: from health context to understanding</title>
-  <desc id="description">The input landscape includes astronaut context, physiology, daily life, mission environment, and knowledge and interaction. Most listed areas are planned; the current application supports a smaller subset. A local CQL engine produces explained findings and supports a health workspace, routines, reminders, and private exports.</desc>
+  <title id="title">ST-HA: from health context to action</title>
+  <desc id="description">Four input gates lead to a NASA-informed knowledge base and CQL inference engine, with a Scenario Lab for previews and experiences including dashboard insights, routines, mobile and wearable reminders, and record history.</desc>
   <defs>
-    <linearGradient id="background" x2="1" y2="1"><stop stop-color="#081427"/><stop offset="1" stop-color="#10223d"/></linearGradient>
-    <linearGradient id="engine" x2="1" y2="1"><stop stop-color="#1b4967"/><stop offset="1" stop-color="#142943"/></linearGradient>
-    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#90b5d8" stroke-opacity=".06"/></pattern>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#081427"/><stop offset="1" stop-color="#112443"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#173a59"/><stop offset="1" stop-color="#142943"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1L11 6L1 11" fill="none" stroke="#78c9ee" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
     <style>
-      text{font-family:Inter,"Segoe UI",Arial,sans-serif}
-      .brand{fill:#8ac8f5;font-size:18px;font-weight:700;letter-spacing:3px}
-      .title{fill:#f4f8ff;font-size:46px;font-weight:700;letter-spacing:-1px}
-      .subtitle{fill:#b5cbe0;font-size:21px}
-      .kicker{fill:#86c9ed;font-size:17px;font-weight:700;letter-spacing:2px}
-      .heading{fill:#f4f8ff;font-size:22px;font-weight:700}
-      .item{fill:#d7e7f2;font-size:18px}
-      .small{fill:#b9cede;font-size:16px}
-      .engine-title{fill:#f4f8ff;font-size:29px;font-weight:700}
-      .output{fill:#eaf5ff;font-size:20px;font-weight:700}
-      .card{fill:#162c45;stroke:#355b74}
-      .icon{fill:none;stroke:#8ce4df;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+      text { font-family: "Segoe UI", Arial, sans-serif; }
+      .eyebrow { fill: #8db9ed; font-size: 19px; font-weight: 700; letter-spacing: 3px; }
+      .title { fill: #f4f8ff; font-size: 54px; font-weight: 700; }
+      .subtitle { fill: #b7cbe1; font-size: 27px; }
+      .section { fill: #87c6f5; font-size: 21px; font-weight: 700; letter-spacing: 2px; }
+      .card { fill: #142a47; stroke: #365473; stroke-width: 2; }
+      .card-title { fill: #f3f7ff; font-size: 27px; font-weight: 700; }
+      .card-copy { fill: #b4cbe0; font-size: 21px; }
+      .core-title { fill: #ffffff; font-size: 38px; font-weight: 700; }
+      .core-copy { fill: #bfd7ec; font-size: 23px; }
+      .engine-title { fill: #ffffff; font-size: 29px; font-weight: 700; }
+      .footer { fill: #9eb8d1; font-size: 18px; font-weight: 600; letter-spacing: 1px; }
+      .icon { fill: none; stroke: #8bc6ff; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
     </style>
   </defs>
   <rect width="1920" height="1080" fill="url(#background)"/>
-  <rect width="1920" height="1080" fill="url(#grid)"/>
-  <g transform="translate(60 48)" class="icon">
-    <circle cx="20" cy="20" r="19"/><ellipse cx="20" cy="20" rx="28" ry="11" transform="rotate(-35 20 20)"/><circle cx="20" cy="20" r="3" fill="#8ce4df" stroke="none"/>
+  <circle cx="1810" cy="90" r="220" fill="none" stroke="#82baff" stroke-opacity=".08" stroke-width="2"/>
+  <circle cx="1810" cy="90" r="170" fill="none" stroke="#82baff" stroke-opacity=".08" stroke-width="2"/>
+
+  <text x="70" y="65" class="eyebrow">SPACE TIGERS  /  SPACE TIGER HEALTH ASSISTANT</text>
+  <text x="70" y="142" class="title">From health context to clear action.</text>
+  <text x="72" y="190" class="subtitle">One connected view of astronaut health, knowledge and daily support.</text>
+  <path d="M70 225H1850" stroke="#33516f" stroke-width="2"/>
+
+  <text x="70" y="283" class="section">01  /  INPUT GATES</text>
+  <text x="674" y="283" class="section">02  /  KNOWLEDGE &amp; INFERENCE</text>
+  <text x="1350" y="283" class="section">03  /  EXPERIENCE</text>
+
+  <g transform="translate(70 315)">
+    <rect class="card" width="485" height="128" rx="18"/>
+    <circle cx="53" cy="64" r="30" fill="#204568"/>
+    <g class="icon" transform="translate(39 49)"><path d="M0 16h6l4-9 5 17 4-10h8"/></g>
+    <text x="100" y="54" class="card-title">Health measurements</text>
+    <text x="100" y="87" class="card-copy">Vitals, strength &amp; observations</text>
   </g>
-  <text x="120" y="65" class="brand">SPACE TIGER HEALTH ASSISTANT</text>
-  <text x="120" y="90" class="small">ST-HA  /  THE HUMAN PICTURE</text>
-  <text x="60" y="152" class="title">From health context to understanding.</text>
-  <text x="62" y="190" class="subtitle">An explainable path from observations and context to insights and action.</text>
-  <rect x="1514" y="53" width="346" height="49" rx="24" fill="#17344a" stroke="#46768c"/>
-  <circle cx="1540" cy="77" r="5" fill="#79e3d3"/>
-  <text x="1558" y="84" class="kicker">EXPLAINABLE BY DESIGN</text>
-
-  <text x="60" y="229" class="kicker">01  /  INPUT LANDSCAPE</text>
-  <text x="304" y="229" class="small">CURRENT CAPABILITIES + PLANNED AREAS</text>
-  <text x="1254" y="229" class="kicker">02  /  KNOWLEDGE &amp; EXPERIENCE</text>
-
-  <g transform="translate(60 246)">
-    <rect class="card" width="372" height="350" rx="18"/>
-    <g class="icon" transform="translate(20 20)"><circle cx="12" cy="8" r="6"/><path d="M1 26c0-7 5-11 11-11s11 4 11 11"/></g>
-    <text x="57" y="43" class="heading">Astronaut &amp; baseline</text>
-    <g class="item" transform="translate(22 83)">
-      <text y="0">•  Identity &amp; assignment</text>
-      <text y="25">•  Individual baseline</text>
-      <text y="50">•  Medical context</text>
-      <text y="75">•  Individual plan</text>
-      <text y="100">•  Preferences &amp; accessibility</text>
-    </g>
-    <path d="M25 219h322" stroke="#355b74"/>
-    <text x="23" y="250" class="small">Personal history, reference plans</text>
-    <text x="23" y="274" class="small">and the context behind each record.</text>
+  <g transform="translate(70 460)">
+    <rect class="card" width="485" height="128" rx="18"/>
+    <circle cx="53" cy="64" r="30" fill="#204568"/>
+    <g class="icon" transform="translate(40 48)"><path d="M23 20A13 13 0 0 1 7 3a13 13 0 1 0 16 17z"/></g>
+    <text x="100" y="54" class="card-title">Daily wellbeing</text>
+    <text x="100" y="87" class="card-copy">Sleep, fluids, mood &amp; fatigue</text>
   </g>
-
-  <g transform="translate(447 246)">
-    <rect class="card" width="372" height="350" rx="18"/>
-    <g class="icon" transform="translate(20 20)"><path d="M12 25S0 18 0 9C0 2 8-1 12 5c4-6 12-3 12 4 0 9-12 16-12 16z"/></g>
-    <text x="57" y="43" class="heading">Physiology &amp; medical</text>
-    <g class="item" transform="translate(20 75)">
-      <text y="0">•  Heart rate</text><text y="19">•  Blood pressure</text><text y="38">•  Body temperature</text><text y="57">•  Blood glucose</text>
-      <text y="76">•  Oxygen saturation &amp; breathing</text><text y="95">•  Symptoms &amp; functional changes</text><text y="114">•  Eye &amp; vision observations</text>
-      <text y="133" font-size="16">•  Balance, motion sickness &amp; coordination</text><text y="152">•  Strength &amp; performance</text><text y="171">•  Aerobic capacity</text>
-      <text y="190">•  Imaging &amp; exams</text><text y="209">•  Lab &amp; biomarker results</text><text y="228">•  Body mass, bone &amp; composition</text>
-      <text y="247" font-size="16">•  Medication, supplements &amp; interventions</text>
-    </g>
+  <g transform="translate(70 605)">
+    <rect class="card" width="485" height="128" rx="18"/>
+    <circle cx="53" cy="64" r="30" fill="#204568"/>
+    <g class="icon" transform="translate(41 48)"><circle cx="12" cy="9" r="7"/><path d="M0 30c0-7 5-11 12-11s12 4 12 11"/></g>
+    <text x="100" y="54" class="card-title">Personal context</text>
+    <text x="100" y="87" class="card-copy">Profile, baseline &amp; history</text>
+  </g>
+  <g transform="translate(70 750)">
+    <rect class="card" width="485" height="128" rx="18"/>
+    <circle cx="53" cy="64" r="30" fill="#204568"/>
+    <g class="icon" transform="translate(39 49)"><circle cx="14" cy="15" r="10"/><ellipse cx="14" cy="15" rx="19" ry="7" transform="rotate(-32 14 15)"/></g>
+    <text x="100" y="54" class="card-title">Mission context</text>
+    <text x="100" y="87" class="card-copy">Environment, plans &amp; conditions</text>
   </g>
 
-  <g transform="translate(834 246)">
-    <rect class="card" width="372" height="350" rx="18"/>
-    <g class="icon" transform="translate(22 20)"><path d="M21 19A12 12 0 0 1 7 1a12 12 0 1 0 14 18z"/><path d="M22 1v6M19 4h6"/></g>
-    <text x="57" y="43" class="heading">Daily life &amp; wellbeing</text>
-    <g class="item" transform="translate(20 78)">
-      <text y="0">•  Sleep</text><text y="25">•  Mood &amp; wellbeing</text><text y="50">•  Cognition &amp; attention</text><text y="75">•  Workload &amp; schedule</text>
-      <text y="100">•  Physical activity &amp; exercise</text><text y="125">•  Food &amp; nutrition</text><text y="150">•  Fluids &amp; related symptoms</text>
-      <text y="175" font-size="16">•  Social connection &amp; crew interaction</text><text y="200">•  Measurement &amp; task adherence</text>
-    </g>
+  <path d="M578 597H650" stroke="#78c9ee" stroke-width="4" marker-end="url(#arrow)"/>
+  <rect x="674" y="315" width="576" height="440" rx="24" fill="url(#core)" stroke="#5084a4" stroke-width="2"/>
+  <text x="714" y="387" class="core-title">Knowledge base</text>
+  <text x="714" y="435" class="core-copy">NASA-informed sources, evidence</text>
+  <text x="714" y="468" class="core-copy">and health reference concepts.</text>
+  <path d="M714 503H1210" stroke="#547b94" stroke-width="2"/>
+  <rect x="714" y="538" width="496" height="174" rx="18" fill="#0c253e" stroke="#5d9bb5" stroke-width="2"/>
+  <circle cx="773" cy="598" r="28" fill="#1e5871"/>
+  <g class="icon" transform="translate(758 583)"><circle cx="15" cy="15" r="6"/><path d="M15 0v5M15 25v5M0 15h5M25 15h5M4 4l4 4M22 22l4 4M26 4l-4 4M8 22l-4 4"/></g>
+  <text x="820" y="595" class="engine-title">CQL inference engine</text>
+  <text x="820" y="632" class="card-copy">Rules evaluate supported inputs</text>
+  <text x="820" y="663" class="card-copy">and produce explainable findings.</text>
+  <path d="M962 755V774" stroke="#78c9ee" stroke-width="3" marker-end="url(#arrow)"/>
+  <g transform="translate(674 783)">
+    <rect width="576" height="95" rx="18" fill="#142a47" stroke="#5084a4" stroke-width="2"/>
+    <circle cx="53" cy="48" r="28" fill="#204568"/>
+    <g class="icon" transform="translate(40 32)"><path d="M9 0h8M11 0v11L2 26c-2 4 0 6 4 6h14c4 0 6-2 4-6l-9-15V0M6 22h15"/></g>
+    <text x="100" y="41" class="card-title">Scenario Lab</text>
+    <text x="100" y="73" class="card-copy">Preview changes without saving</text>
+  </g>
+  <path d="M1274 597H1327" stroke="#78c9ee" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g transform="translate(1350 315)">
+    <rect class="card" width="500" height="128" rx="18"/>
+    <circle cx="53" cy="64" r="30" fill="#204568"/>
+    <g class="icon" transform="translate(39 49)"><rect x="0" y="1" width="29" height="28" rx="3"/><path d="M0 10h29M10 10v19"/></g>
+    <text x="100" y="54" class="card-title">Dashboard &amp; insights</text>
+    <text x="100" y="87" class="card-copy">Body view, trends &amp; explanations</text>
+  </g>
+  <g transform="translate(1350 460)">
+    <rect class="card" width="500" height="128" rx="18"/>
+    <circle cx="53" cy="64" r="30" fill="#204568"/>
+    <g class="icon" transform="translate(40 48)"><rect x="2" y="3" width="23" height="28" rx="3"/><path d="M8 0h11M8 13h11M8 20h11"/></g>
+    <text x="100" y="54" class="card-title">Daily routines</text>
+    <text x="100" y="87" class="card-copy">Activities, check-ins &amp; reminders</text>
+  </g>
+  <g transform="translate(1350 605)">
+    <rect class="card" width="500" height="128" rx="18"/>
+    <circle cx="53" cy="64" r="30" fill="#204568"/>
+    <g class="icon" transform="translate(38 48)"><rect x="1" y="0" width="17" height="29" rx="3"/><rect x="23" y="8" width="12" height="14" rx="4"/></g>
+    <text x="100" y="54" class="card-title">Mobile &amp; wearable</text>
+    <text x="100" y="87" class="card-copy">Health view &amp; timely reminders</text>
+    <g class="icon" transform="translate(445 44)"><path d="M5 24h24l-3-4v-7a9 9 0 0 0-18 0v7zM14 29a4 4 0 0 0 6 0"/></g>
+  </g>
+  <g transform="translate(1350 750)">
+    <rect class="card" width="500" height="128" rx="18"/>
+    <circle cx="53" cy="64" r="30" fill="#204568"/>
+    <g class="icon" transform="translate(39 48)"><path d="M2 5h23v25H2zM7 11h13M7 17h13M7 23h9"/></g>
+    <text x="100" y="54" class="card-title">History &amp; evidence</text>
+    <text x="100" y="87" class="card-copy">Records, sources &amp; review</text>
   </g>
 
-  <g transform="translate(60 610)">
-    <rect class="card" width="565" height="330" rx="18"/>
-    <g class="icon" transform="translate(20 19)"><circle cx="13" cy="13" r="11"/><ellipse cx="13" cy="13" rx="18" ry="7" transform="rotate(-35 13 13)"/></g>
-    <text x="59" y="42" class="heading">Mission &amp; environment</text>
-    <g class="item" transform="translate(21 76)">
-      <text y="0">•  Mission phase &amp; location</text><text y="22">•  Gravity &amp; transitions</text><text y="44">•  Isolation &amp; confinement</text>
-      <text y="66">•  Communication &amp; support availability</text><text y="88">•  Personal radiation exposure</text><text y="110">•  Environmental radiation &amp; neutron monitoring</text>
-      <text y="132">•  Space-weather events</text><text y="154">•  Cabin atmosphere</text><text y="176">•  Light, noise &amp; habitability</text>
-      <text y="198">•  Microbial &amp; environmental observations</text><text y="220">•  Spacewalk &amp; suit context</text><text y="242">•  Equipment, supplies &amp; support</text>
-    </g>
-  </g>
-  <g transform="translate(640 610)">
-    <rect class="card" width="566" height="330" rx="18"/>
-    <g class="icon" transform="translate(20 19)"><path d="M2 3h8c4 0 5 2 5 4v19c0-3-2-4-5-4H2zM28 3h-8c-4 0-5 2-5 4v19c0-3 2-4 5-4h8z"/></g>
-    <text x="60" y="42" class="heading">Knowledge &amp; interaction</text>
-    <g class="item" transform="translate(21 78)">
-      <text y="0">•  Scientific evidence</text><text y="25">•  Procedures &amp; guidance</text><text y="50">•  Definitions &amp; rules</text>
-      <text y="75">•  Alert &amp; reminder configuration</text><text y="100">•  User actions &amp; feedback</text><text y="125">•  Consent &amp; access preferences</text>
-      <text y="150">•  Device &amp; source state</text>
-    </g>
-    <path d="M22 250h522" stroke="#355b74"/>
-    <text x="22" y="277" class="small">Subject, meaning, values, units, time, source, conditions,</text>
-    <text x="22" y="300" class="small">quality, corrections, access and derivation lineage.</text>
-  </g>
-
-  <path d="M1216 585h28" stroke="#86dcd9" stroke-width="3"/><path d="M1236 577l9 8-9 8" class="icon"/>
-  <g transform="translate(1254 246)">
-    <rect width="606" height="222" rx="18" fill="url(#engine)" stroke="#528095"/>
-    <circle cx="78" cy="87" r="49" fill="#12364c" stroke="#75cbd5" stroke-width="2"/>
-    <g class="icon" transform="translate(55 64)"><circle cx="23" cy="23" r="10"/><path d="M19 0h8l3 6 6 2 6-2 4 7-5 5v10l5 5-4 7-6-2-6 2-3 6h-8l-3-6-6-2-6 2-4-7 5-5V18l-5-5 4-7 6 2 6-2z"/></g>
-    <text x="151" y="77" class="engine-title">CQL inference engine</text>
-    <text x="151" y="111" class="item">Knowledge rules evaluated on-device</text>
-    <text x="151" y="143" class="small">Freshness  ·  thresholds  ·  context</text>
-    <path d="M26 170h554" stroke="#4b7183"/>
-    <text x="27" y="199" class="small">Evidence, source and uncertainty remain visible.</text>
-  </g>
-  <g transform="translate(1254 483)">
-    <rect class="card" width="606" height="271" rx="18"/>
-    <text x="25" y="40" class="kicker">03  /  EXPERIENCE</text>
-    <g transform="translate(26 63)">
-      <circle cx="18" cy="18" r="18" fill="#23465c"/><path d="M8 24l7-9 7 4 6-9" class="icon"/>
-      <text x="53" y="18" class="output">Health workspace</text><text x="53" y="39" class="small">Body navigator, metrics and trends</text>
-    </g>
-    <g transform="translate(26 116)">
-      <circle cx="18" cy="18" r="18" fill="#23465c"/><path d="M12 10h13M12 17h13M12 24h9" class="icon"/>
-      <text x="53" y="18" class="output">Explained findings</text><text x="53" y="39" class="small">Reasons, sources and limitations</text>
-    </g>
-    <g transform="translate(26 169)">
-      <circle cx="18" cy="18" r="18" fill="#23465c"/><path d="M10 23h16l-2-4v-5a6 6 0 0 0-12 0v5zM16 28h4" class="icon"/>
-      <text x="53" y="18" class="output">Tasks &amp; reminders</text><text x="53" y="39" class="small">Routine actions and notifications</text>
-    </g>
-    <text x="79" y="258" class="small">Plus privacy-filtered export</text>
-  </g>
-  <g transform="translate(1254 769)">
-    <rect width="606" height="171" rx="18" fill="#122940" stroke="#315572"/>
-    <text x="25" y="36" class="heading">Available now</text>
-    <text x="25" y="67" class="small">Sleep, fluid intake, fatigue, mood and digestive check-ins;</text>
-    <text x="25" y="91" class="small">pulse and handgrip readings; assessment</text>
-    <text x="25" y="115" class="small">tasks. Other input areas are planned.</text>
-    <text x="25" y="146" class="small">Pulse is displayed; only relevant inputs feed the CQL rules.</text>
-  </g>
-  <path d="M60 992h1800" stroke="#34516e"/>
-  <text x="60" y="1024" class="small">SPACE TIGERS  /  HEALTH MONITORING</text>
-  <text x="1860" y="1024" class="small" text-anchor="end">ST-HA  ·  SYSTEM OVERVIEW</text>
+  <path d="M70 949H1850" stroke="#33516f" stroke-width="2"/>
+  <text x="70" y="997" class="footer">SPACE TIGERS  /  MISSION HEALTH, UNDERSTOOD</text>
+  <text x="1850" y="997" class="footer" text-anchor="end">ST-HA  /  SYSTEM OVERVIEW</text>
 </svg>

@@ -1,0 +1,52 @@
+ST-HA VIDEO NARRATIVE
+Space Tigers: Mert Kaplan and Kemal Kaplan
+Target: 30 seconds maximum, including the cover and closing card.
+
+1. INTRO
+Visual: Space Tigers logo, team names, ST-HA title and GitHub address.
+
+"Space Tigers present the Space Tiger Health Assistant."
+
+2. SYSTEM OVERVIEW
+Visual: Show the system overview as the narration follows the diagram from
+input gates through the knowledge base to the dashboard and Scenario Lab.
+
+"Health and mission data meet NASA-informed knowledge. Clinical Quality
+Language explains findings; Scenario Lab explores changes."
+
+3. WEB JOURNEY
+Visual: Show the dashboard, a finding explanation and the daily routine.
+
+"Explore findings and daily routines on the dashboard."
+
+4. MOBILE / WEARABLE FEATURES
+Visual: Show the mobile dashboard, phone reminder and watch notification.
+
+"Mobile and wearable reminders support the crew."
+
+5. USEFUL LINKS AND DISCLAIMER
+Visual: Closing card with links and concise disclaimers.
+
+"Explore our app and code. Fictional prototype, not medical advice."
+
+LINKS
+App: https://mertk26.github.io/ST-HA/
+Code: https://github.com/Mertk26/ST-HA
+Evidence: Open About & credits, then Evidence library in the app.
+
+CLOSING CARD DISCLAIMERS
+- Profiles, readings and plans are fictional.
+- No connected sensors or backend; sign-in is not authentication.
+- Example ranges are not clinical or safety limits.
+- Watch notification shown in an emulator; physical delivery is unverified.
+- Not a medical device or medical advice; not validated or endorsed by NASA.
+
+PRODUCTION NOTES
+- Give the system overview enough time to read, explaining it before the web journey.
+- Use direct transitions without chapter markers covering the interface.
+- Keep the final video at or below 30 seconds; measure the finished runtime.
+- Disclose computer-generated narration and other AI assistance as applicable.
+- Narration uses the offline Piper TTS en_US-amy-medium model; its model card
+  and training-data attribution are at:
+  https://huggingface.co/rhasspy/piper-voices/tree/main/en/en_US/amy/medium
+- Attribute external resources and host the finished demo at a public link.
