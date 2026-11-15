@@ -5,24 +5,26 @@ Target: 30 seconds maximum, including the cover and closing card.
 1. INTRO
 Visual: Space Tigers logo, team names, ST-HA title and GitHub address.
 
-"Space Tigers present the Space Tiger Health Assistant."
+"Meet the Space Tiger Health Assistant."
 
 2. SYSTEM OVERVIEW
 Visual: Show the system overview as the narration follows the diagram from
 input gates through the knowledge base to the dashboard and Scenario Lab.
 
-"Health and mission data meet NASA-informed knowledge. Clinical Quality
-Language explains findings; Scenario Lab explores changes."
+"Daily check-ins, health measurements and mission data meet NASA-informed
+knowledge. Clinical Quality Language explains findings; Scenario Lab previews
+changes without saving."
 
 3. WEB JOURNEY
 Visual: Show the dashboard, a finding explanation and the daily routine.
 
-"Explore findings and daily routines on the dashboard."
+"Explore trends and body context, review the evidence behind findings, and
+manage routines."
 
 4. MOBILE / WEARABLE FEATURES
 Visual: Show the mobile dashboard, phone reminder and watch notification.
 
-"Mobile and wearable reminders support the crew."
+"Mobile dashboards and phone and wearable reminders support the crew."
 
 5. USEFUL LINKS AND DISCLAIMER
 Visual: Closing card with links and concise disclaimers.
@@ -46,7 +48,8 @@ PRODUCTION NOTES
 - Use direct transitions without chapter markers covering the interface.
 - Keep the final video at or below 30 seconds; measure the finished runtime.
 - Disclose computer-generated narration and other AI assistance as applicable.
-- Narration uses the offline Piper TTS en_US-amy-medium model; its model card
-  and training-data attribution are at:
+- Narration uses the offline Piper TTS en_US-amy-medium model at length scale
+  0.90, noise scale 0.62, and noise width 0.42. Its model card and training-data
+  attribution are at:
   https://huggingface.co/rhasspy/piper-voices/tree/main/en/en_US/amy/medium
 - Attribute external resources and host the finished demo at a public link.
