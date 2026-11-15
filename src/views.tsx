@@ -25,12 +25,12 @@ export function Login({ onSignIn, busy }: { onSignIn: (id: PersonaId) => void; b
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 8000);
     try {
-      const response = await fetch('/app-debug.apk', { method: 'HEAD', signal: controller.signal });
+      const response = await fetch(`${import.meta.env.BASE_URL}app-debug.apk`, { method: 'HEAD', signal: controller.signal });
       if (!response.ok || response.headers.get('content-type')?.includes('text/html')) {
         throw new Error('The Android package is not available yet.');
       }
       const link = document.createElement('a');
-      link.href = '/app-debug.apk';
+      link.href = `${import.meta.env.BASE_URL}app-debug.apk`;
       link.download = 'app-debug.apk';
       link.click();
     } catch (reason) {
@@ -175,7 +175,7 @@ export function AboutView({ onOpenEvidence }: { onOpenEvidence?: () => void }) {
   const [evidenceOpen, setEvidenceOpen] = useState(false);
   return <section className="card about-card" aria-label="About Space Tiger Health Assistant">
     <figure className="team-identity">
-      <img src="/space-tiger-team.jpg" alt="Space Tigers team logo: a space-suited tiger above the team name" width="300" height="250" />
+      <img src={`${import.meta.env.BASE_URL}space-tiger-team.jpg`} alt="Space Tigers team logo: a space-suited tiger above the team name" width="300" height="250" />
       <figcaption>Space Tigers team</figcaption>
     </figure>
     <div className="about-copy">

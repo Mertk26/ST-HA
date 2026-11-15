@@ -37,6 +37,7 @@ Open the address printed by Vite. Choose **Alex Morgan**, enter the workspace, s
 - A dark-blue space theme, with the supplied Space Tigers team logo and evidence library in **About & credits**, accessible from sign-in and the workspace navigation.
 - A responsive system overview in sign-in and About, with a separate [presentation diagram](./public/st-ha-how-it-works.svg). Both show the wider input landscape.
 - The sign-in screen links to `/app-debug.apk`. Place the Android debug package in `public\app-debug.apk` before deploying to make that download available.
+- The GitHub Pages workflow builds with the `/ST-HA/` base path. Enable GitHub Pages with **GitHub Actions** as the source in repository settings before running the workflow.
 - A streamlined daily check-in without demonstration or disconnected-device banners. Observation records retain source metadata; About & credits explains the fictional profiles, example data, and lack of authentication or sensor integration.
 - Generated Capacitor Android project and ordinary, inexact native reminder integration. Future pending tasks use stable persona-scoped IDs and generic UTC previews; no health values appear in those previews.
 
