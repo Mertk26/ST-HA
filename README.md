@@ -4,6 +4,11 @@
 
 ST-HA connects source-aware observations to explicit CQL rules, showing what triggered a finding, the supporting records, its source, and its limits. All profiles, observations, and individual plans are fictional. This is not a medical device, autonomous doctor, clinical clearance system, or NASA-endorsed product.
 
+## Android downloads
+
+- [Android phone APK](./public/app-debug.apk)
+- [Wear OS watch APK](./public/wear-debug.apk)
+
 ## Run locally
 
 Requires Node **22.18+** and npm. From the project root:
